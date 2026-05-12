@@ -2,7 +2,35 @@
 <html lang="ru"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>МАСТЕРСКАЯ СТЕН — Гидроизоляция и декоративная штукатурка</title>
+<title>Гидроизоляция и декоративная штукатурка в Ростове-на-Дону | Мастерская стен</title>
+<meta name="description" content="Профессиональная гидроизоляция ванных, балконов, подвалов и декоративная штукатурка в Ростове-на-Дону. Гарантия 3 года. Расчёт онлайн.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://masterskaya-sten.ru/">
+<meta name="theme-color" content="#1e2535">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="format-detection" content="telephone=no">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://masterskaya-sten.ru/">
+<meta property="og:title" content="Гидроизоляция и декоративная штукатурка в Ростове-на-Дону | Мастерская стен">
+<meta property="og:description" content="Профессиональная гидроизоляция ванных, балконов, подвалов и декоративная штукатурка в Ростове-на-Дону. Гарантия 3 года. Расчёт онлайн.">
+<!-- Schema.org LocalBusiness -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"LocalBusiness","name":"Мастерская стен","description":"Профессиональная гидроизоляция и декоративная штукатурка в Ростове-на-Дону","address":{"@type":"PostalAddress","addressLocality":"Ростов-на-Дону","addressRegion":"Ростовская область","addressCountry":"RU"},"areaServed":[{"@type":"City","name":"Ростов-на-Дону"},{"@type":"AdministrativeArea","name":"Ростовская область"}],"priceRange":"от 800 руб/м²","telephone":"+74952401844","url":"https://masterskaya-sten.ru/"}
+</script>
+<!-- Yandex.Metrika — REPLACE: вставить реальный ID счётчика перед релизом -->
+<script>
+  (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+  m[i].l=1*new Date();
+  for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}
+  k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+  (window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");
+  /* TODO: REPLACE 0 with real Yandex.Metrika counter ID before release */
+  ym(0,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/0" style="position:absolute;left:-9999px" alt=""></div></noscript>
+<!-- /Yandex.Metrika -->
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -619,9 +647,9 @@
     transition:border-color .2s, color .2s;
   }
   .calc-extras label.chk:hover{color:var(--cream);border-color:rgba(192,80,42,0.4)}
-  .calc-extras input[type="checkbox"]{appearance:none;width:16px;height:16px;border:1px solid var(--text-dim);position:relative}
+  .calc-extras input[type="checkbox"]{appearance:none;flex:0 0 18px;width:18px;height:18px;border:1px solid var(--text-dim);position:relative;display:inline-flex;align-items:center;justify-content:center}
   .calc-extras input[type="checkbox"]:checked{background:var(--accent);border-color:var(--accent)}
-  .calc-extras input[type="checkbox"]:checked::after{content:"✓";color:#fff;position:absolute;inset:0;display:grid;place-items:center;font-size:12px}
+  .calc-extras input[type="checkbox"]:checked::after{content:"✓";color:#fff;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:11px;line-height:1}
   .calc-extras label.chk:has(input:checked){color:var(--cream);border-color:var(--accent)}
 
   .calc-result{
@@ -690,6 +718,7 @@
       linear-gradient(180deg,#4a3f33,#2a221a);
     opacity:1;
   }
+  .ba .before.has-photo::before{display:none}
   .ba .before .lbl{position:absolute;top:50%;transform:translate(-50%,-50%);z-index:2;background:rgba(0,0,0,.5);padding:6px 14px;white-space:nowrap}
   .ba .after{
     width:50%;border-right:2px solid var(--accent);background:var(--cream);color:#2a2218;
@@ -853,6 +882,50 @@
     .foot-bottom{flex-direction:column;gap:12px;text-align:center}
     .section-num{font-size:60px}
   }
+  @media (max-width:480px){
+    /* Nav */
+    .nav{padding:12px 16px}
+    .nav .phone{display:none}
+    /* Hero */
+    .hero .half{height:50vh;min-height:320px}
+    .hero-divider{top:50vh}
+    .hero.left-active .hero-divider,.hero.right-active .hero-divider{top:50vh}
+    .hero-divider .logo{width:90px;height:90px}
+    .hero-divider .logo .glyph{width:28px;height:28px;margin-bottom:6px}
+    .hero-divider .logo .name{font-size:9px;letter-spacing:.1em}
+    .hero-divider .logo .est{display:none}
+    .hero-content{padding:0 16px 36px}
+    .hero-title{font-size:clamp(36px,10vw,48px)}
+    .hero-cta{padding:12px 18px;font-size:12px}
+    /* Trust */
+    .trust{gap:12px 24px;padding:16px}
+    .trust .sep{display:none}
+    .trust .item{font-size:12px}
+    .trust .item b{font-size:18px}
+    /* Sections */
+    .section{padding:56px 16px}
+    .section-title{font-size:clamp(26px,7.5vw,36px)}
+    .section-sub{font-size:15px}
+    .section-num{font-size:36px}
+    .section-head{margin-bottom:36px}
+    /* Services */
+    .service-card{padding:24px 18px}
+    /* Calc */
+    .calc-form{padding:28px 18px}
+    .calc-result{padding:28px 18px}
+    .calc-extras{grid-template-columns:1fr}
+    /* Gallery */
+    .gallery-card{min-width:94%;height:360px}
+    /* Quiz */
+    .quiz-side{padding:28px 18px}
+    .quiz-side h3{font-size:24px}
+    .quiz-form{padding:28px 18px;min-height:auto}
+    /* Footer */
+    .foot-grid{grid-template-columns:1fr}
+    .phone-big{font-size:22px}
+    /* Adv */
+    .adv-grid{grid-template-columns:1fr}
+  }
 </style>
 </head>
 <body>
@@ -869,7 +942,7 @@
     <li><a href="#gallery">Работы</a></li>
     <li><a href="#quiz">Заявка</a></li>
   </ul>
-  <div class="phone">+7 (495) 240-18-44</div>
+  <div class="phone"><a href="tel:+74952401844" onclick="if(typeof ym==='function')ym(0,'reachGoal','phone_click')" style="color:inherit;text-decoration:none">+7 (495) 240-18-44</a></div>
 </nav>
 
 <!-- ===== HERO ===== -->
@@ -1055,8 +1128,8 @@
     <!-- card 1 -->
     <div class="gallery-card">
       <div class="ba" data-pos="50">
-        <div class="before"><span class="lbl">До</span></div>
-        <div class="after" style="width:50%"><span class="lbl">После · Венецианская</span></div>
+        <div class="before has-photo" style="background-image:url('assets/images/in1.jpg');background-size:cover;background-position:center"><span class="lbl">До</span></div>
+        <div class="after" style="width:50%;background-image:url('assets/images/after1.jpg');background-size:cover;background-position:center"><span class="lbl">После · Венецианская</span></div>
         <div class="handle" style="left:50%"><div class="bar"></div><div class="knob">⇄</div></div>
       </div>
       <div class="gallery-meta">
@@ -1067,8 +1140,8 @@
     <!-- card 2 -->
     <div class="gallery-card">
       <div class="ba" data-pos="50">
-        <div class="before"><span class="lbl">До</span></div>
-        <div class="after" style="width:50%;background-image:radial-gradient(ellipse at 60% 40%,rgba(255,255,255,0.5),transparent 60%),repeating-linear-gradient(120deg,rgba(120,90,60,0.08) 0 1px,transparent 1px 5px),linear-gradient(180deg,#d8d2c4,#bfb6a3)"><span class="lbl">После · Микроцемент</span></div>
+        <div class="before has-photo" style="background-image:url('assets/images/in2.jpg');background-size:cover;background-position:center"><span class="lbl">До</span></div>
+        <div class="after" style="width:50%;background-image:url('assets/images/after2.jpg');background-size:cover;background-position:center"><span class="lbl">После · Травертин</span></div>
         <div class="handle" style="left:50%"><div class="bar"></div><div class="knob">⇄</div></div>
       </div>
       <div class="gallery-meta">
@@ -1079,8 +1152,8 @@
     <!-- card 3 -->
     <div class="gallery-card">
       <div class="ba" data-pos="50">
-        <div class="before"><span class="lbl">До</span></div>
-        <div class="after" style="width:50%;background-image:radial-gradient(ellipse at 30% 70%,rgba(120,140,170,0.25),transparent 60%),repeating-linear-gradient(15deg,rgba(80,100,140,0.1) 0 2px,transparent 2px 6px),linear-gradient(180deg,#1f2738,#161b29);color:#a9b3c8"><span class="lbl">После · Гидроизоляция</span></div>
+        <div class="before has-photo" style="background-image:url('assets/images/in3.jpg');background-size:cover;background-position:center"><span class="lbl">До</span></div>
+        <div class="after" style="width:50%;background-image:url('assets/images/after3.jpg');background-size:cover;background-position:center"><span class="lbl">После · Гидроизоляция</span></div>
         <div class="handle" style="left:50%"><div class="bar"></div><div class="knob">⇄</div></div>
       </div>
       <div class="gallery-meta">
@@ -1091,8 +1164,8 @@
     <!-- card 4 -->
     <div class="gallery-card">
       <div class="ba" data-pos="50">
-        <div class="before"><span class="lbl">До</span></div>
-        <div class="after" style="width:50%;background-image:radial-gradient(ellipse at 40% 30%,rgba(255,240,210,0.5),transparent 50%),repeating-linear-gradient(60deg,rgba(140,90,40,0.1) 0 2px,transparent 2px 7px),linear-gradient(180deg,#c8a883,#9a7e5a);color:#3a2818"><span class="lbl">После · Короед</span></div>
+        <div class="before has-photo" style="background-image:url('assets/images/in4.jpg');background-size:cover;background-position:center"><span class="lbl">До</span></div>
+        <div class="after" style="width:50%;background-image:url('assets/images/after4.jpg');background-size:cover;background-position:center"><span class="lbl">После · Короед</span></div>
         <div class="handle" style="left:50%"><div class="bar"></div><div class="knob">⇄</div></div>
       </div>
       <div class="gallery-meta">
@@ -1103,8 +1176,8 @@
     <!-- card 5 -->
     <div class="gallery-card">
       <div class="ba" data-pos="50">
-        <div class="before"><span class="lbl">До</span></div>
-        <div class="after" style="width:50%;background-image:radial-gradient(ellipse at 70% 60%,rgba(255,255,255,0.6),transparent 50%),repeating-linear-gradient(45deg,rgba(180,150,110,0.08) 0 2px,transparent 2px 8px),linear-gradient(180deg,#ede5d3,#d3c8b0);color:#2a2218"><span class="lbl">После · Рельеф</span></div>
+        <div class="before has-photo" style="background-image:url('assets/images/in5.jpg');background-size:cover;background-position:center"><span class="lbl">До</span></div>
+        <div class="after" style="width:50%;background-image:url('assets/images/after5.jpg');background-size:cover;background-position:center"><span class="lbl">После · Рельеф</span></div>
         <div class="handle" style="left:50%"><div class="bar"></div><div class="knob">⇄</div></div>
       </div>
       <div class="gallery-meta">
@@ -1249,7 +1322,7 @@
     <div class="foot-brand">
       <div class="h-display">Мастерская стен</div>
       <p>Бригада из 6 мастеров. Москва и Московская область. Работаем на материалах Mapei, Litokol, Sika, San Marco.</p>
-      <div class="phone-big">+7 (495) 240-18-44</div>
+      <div class="phone-big"><a href="tel:+74952401844" onclick="if(typeof ym==='function')ym(0,'reachGoal','phone_click')" style="color:inherit;text-decoration:none">+7 (495) 240-18-44</a></div>
     </div>
     <div>
       <h5>Услуги</h5>
@@ -1323,6 +1396,8 @@
   /* ===== CALCULATOR ===== */
   (function(){
     const state = { type:'hydro', area:35, k:1.0 };
+    let calcTracked = false;
+    function trackCalc(){ if(!calcTracked){ calcTracked=true; if(typeof ym==='function') ym(0,'reachGoal','calculator_use'); } }
     const RATE = { hydro:800, plaster:1200 };
     const EXTRAS = {
       'ex-prime':{label:'Грунт', val:120},   // per m2
@@ -1381,21 +1456,21 @@
       segType.querySelectorAll('button').forEach(x=>x.classList.remove('active'));
       b.classList.add('active');
       state.type = b.dataset.type;
-      recalc();
+      trackCalc(); recalc();
     });
     segCx.addEventListener('click', e=>{
       const b = e.target.closest('button'); if(!b) return;
       segCx.querySelectorAll('button').forEach(x=>x.classList.remove('active'));
       b.classList.add('active');
       state.k = parseFloat(b.dataset.k);
-      recalc();
+      trackCalc(); recalc();
     });
     area.addEventListener('input', ()=>{
       state.area = parseInt(area.value,10);
       areaVal.textContent = state.area;
-      recalc();
+      trackCalc(); recalc();
     });
-    document.querySelectorAll('.calc-extras input').forEach(c=>c.addEventListener('change',recalc));
+    document.querySelectorAll('.calc-extras input').forEach(c=>c.addEventListener('change',()=>{ trackCalc(); recalc(); }));
     recalc();
   })();
 
