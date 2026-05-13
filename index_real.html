@@ -2,22 +2,22 @@
 <html lang="ru"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Гидроизоляция и декоративная штукатурка в Ростове-на-Дону | Мастерская стен</title>
+<title>Гидроизоляция и декоративная штукатурка в Ростове-на-Дону | ДОН ГИДРО ДЕКОР</title>
 <meta name="description" content="Профессиональная гидроизоляция ванных, балконов, подвалов и декоративная штукатурка в Ростове-на-Дону. Гарантия 3 года. Расчёт онлайн.">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://masterskaya-sten.ru/">
+<link rel="canonical" href="https://dgd61.ru/">
 <meta name="theme-color" content="#1e2535">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="format-detection" content="telephone=no">
 <!-- Open Graph -->
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://masterskaya-sten.ru/">
-<meta property="og:title" content="Гидроизоляция и декоративная штукатурка в Ростове-на-Дону | Мастерская стен">
+<meta property="og:url" content="https://dgd61.ru/">
+<meta property="og:title" content="Гидроизоляция и декоративная штукатурка в Ростове-на-Дону | ДОН ГИДРО ДЕКОР">
 <meta property="og:description" content="Профессиональная гидроизоляция ванных, балконов, подвалов и декоративная штукатурка в Ростове-на-Дону. Гарантия 3 года. Расчёт онлайн.">
 <!-- Schema.org LocalBusiness -->
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"LocalBusiness","name":"Мастерская стен","description":"Профессиональная гидроизоляция и декоративная штукатурка в Ростове-на-Дону","address":{"@type":"PostalAddress","addressLocality":"Ростов-на-Дону","addressRegion":"Ростовская область","addressCountry":"RU"},"areaServed":[{"@type":"City","name":"Ростов-на-Дону"},{"@type":"AdministrativeArea","name":"Ростовская область"}],"priceRange":"от 800 руб/м²","telephone":"+74952401844","url":"https://masterskaya-sten.ru/"}
+{"@context":"https://schema.org","@type":"LocalBusiness","name":"ДОН ГИДРО ДЕКОР","description":"Профессиональная гидроизоляция и декоративная штукатурка в Ростове-на-Дону","address":{"@type":"PostalAddress","addressLocality":"Ростов-на-Дону","addressRegion":"Ростовская область","addressCountry":"RU"},"areaServed":[{"@type":"City","name":"Ростов-на-Дону"},{"@type":"AdministrativeArea","name":"Ростовская область"}],"priceRange":"от 800 руб/м²","telephone":"+74952401844","url":"https://dgd61.ru/"}
 </script>
 <!-- Yandex.Metrika — REPLACE: вставить реальный ID счётчика перед релизом -->
 <script>
@@ -926,6 +926,74 @@
     /* Adv */
     .adv-grid{grid-template-columns:1fr}
   }
+
+  /* ===== MODAL CONTRACT ===== */
+  .modal-overlay{
+    display:none;position:fixed;inset:0;z-index:9000;
+    background:rgba(10,14,24,0.82);backdrop-filter:blur(4px);
+    align-items:center;justify-content:center;padding:16px;
+  }
+  .modal-overlay.open{display:flex}
+  .modal-box{
+    background:var(--bg-card);border:1px solid var(--border);
+    border-top:2px solid var(--accent);
+    max-width:760px;width:100%;max-height:90vh;
+    display:flex;flex-direction:column;
+    box-shadow:var(--shadow);
+  }
+  .modal-head{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:22px 28px;border-bottom:1px solid var(--border);flex-shrink:0;
+  }
+  .modal-head h3{
+    font-family:'Oswald',sans-serif;font-weight:500;
+    font-size:20px;letter-spacing:.06em;text-transform:uppercase;
+    color:var(--text);margin:0;
+  }
+  .modal-head h3 span{color:var(--accent)}
+  .modal-close{
+    width:36px;height:36px;border:1px solid var(--border);background:none;
+    color:var(--text-dim);cursor:pointer;font-size:20px;line-height:1;
+    display:grid;place-items:center;transition:border-color .2s,color .2s;
+  }
+  .modal-close:hover{border-color:var(--accent);color:var(--accent)}
+  .modal-body{
+    overflow-y:auto;padding:28px;flex:1;
+    scrollbar-width:thin;scrollbar-color:var(--accent) var(--bg);
+  }
+  .modal-body::-webkit-scrollbar{width:4px}
+  .modal-body::-webkit-scrollbar-thumb{background:var(--accent)}
+  .modal-section{margin-bottom:24px}
+  .modal-section h4{
+    font-family:'Oswald',sans-serif;font-weight:500;font-size:14px;
+    letter-spacing:.18em;text-transform:uppercase;color:var(--accent);
+    margin:0 0 10px;
+  }
+  .modal-section p,.modal-section li{
+    font-size:14px;color:var(--text-dim);line-height:1.7;margin:0 0 6px;
+  }
+  .modal-section ul{padding-left:18px;margin:0}
+  .modal-section li{margin-bottom:4px}
+  .modal-section strong{color:var(--text)}
+  .modal-foot{
+    padding:18px 28px;border-top:1px solid var(--border);flex-shrink:0;
+    display:flex;gap:12px;justify-content:flex-end;flex-wrap:wrap;
+  }
+  .modal-btn{
+    padding:11px 26px;font-family:'Oswald',sans-serif;font-size:14px;
+    letter-spacing:.12em;text-transform:uppercase;cursor:pointer;
+    border:1px solid var(--accent);transition:background .2s,color .2s;
+  }
+  .modal-btn.primary{background:var(--accent);color:#fff}
+  .modal-btn.primary:hover{background:var(--accent-bright)}
+  .modal-btn.ghost{background:none;color:var(--text-dim)}
+  .modal-btn.ghost:hover{border-color:var(--text);color:var(--text)}
+  @media(max-width:480px){
+    .modal-head{padding:16px 18px}
+    .modal-body{padding:18px}
+    .modal-foot{padding:14px 18px}
+    .modal-btn{padding:10px 18px;font-size:12px}
+  }
 </style>
 </head>
 <body>
@@ -933,8 +1001,8 @@
 <!-- ===== NAV ===== -->
 <nav class="nav">
   <div class="brand">
-    <div class="mark"><span>М</span></div>
-    <span>Мастерская&nbsp;Стен</span>
+    <div class="mark"><span>Д</span></div>
+    <span>ДОН ГИДРО&nbsp;ДЕКОР</span>
   </div>
   <ul>
     <li><a href="#services">Услуги</a></li>
@@ -942,7 +1010,7 @@
     <li><a href="#gallery">Работы</a></li>
     <li><a href="#quiz">Заявка</a></li>
   </ul>
-  <div class="phone"><a href="tel:+74952401844" onclick="if(typeof ym==='function')ym(0,'reachGoal','phone_click')" style="color:inherit;text-decoration:none">+7 (495) 240-18-44</a></div>
+  <div class="phone"><a href="tel:+79604451369" onclick="if(typeof ym==='function')ym(0,'reachGoal','phone_click')" style="color:inherit;text-decoration:none">+7 (960) 445-13-69</a></div>
 </nav>
 
 <!-- ===== HERO ===== -->
@@ -958,7 +1026,7 @@
   <div class="hero-divider">
     <div class="logo">
       <div class="glyph"></div>
-      <div class="name">Мастерская<br>Стен</div>
+      <div class="name">ДОН ГИДРО<br>ДЕКОР</div>
       <div class="est">Est. 2021</div>
     </div>
   </div>
@@ -1133,8 +1201,8 @@
         <div class="handle" style="left:50%"><div class="bar"></div><div class="knob">⇄</div></div>
       </div>
       <div class="gallery-meta">
-        <span class="ttl">Гостиная · Венецианская</span>
-        <span class="meta">м. Сокол · 28 м² · 2025</span>
+        <span class="ttl">Санузел · Венецианская</span>
+        <span class="meta">ЖК «Парадиз» ул.Красноармейска 94 · 28 м² · 2025</span>
       </div>
     </div>
     <!-- card 2 -->
@@ -1145,8 +1213,8 @@
         <div class="handle" style="left:50%"><div class="bar"></div><div class="knob">⇄</div></div>
       </div>
       <div class="gallery-meta">
-        <span class="ttl">Санузел · Микроцемент</span>
-        <span class="meta">ЖК «Скай» · 14 м² · 2025</span>
+        <span class="ttl">Гостиная · Травертин</span>
+        <span class="meta">ЖК «Усадьба, жилой комплек» ул.Пушкинская 144 · 245 м² · 2025</span>
       </div>
     </div>
     <!-- card 3 -->
@@ -1158,7 +1226,7 @@
       </div>
       <div class="gallery-meta">
         <span class="ttl">Ванная · Обмазочная гидро</span>
-        <span class="meta">ЖК «Прайм» · 9 м² · 2024</span>
+        <span class="meta">ЖК «Рубин» ул.Красноармейска 157 · 9 м² · 2024</span>
       </div>
     </div>
     <!-- card 4 -->
@@ -1170,7 +1238,7 @@
       </div>
       <div class="gallery-meta">
         <span class="ttl">Холл · Короед</span>
-        <span class="meta">КП «Лесное» · 42 м² · 2024</span>
+        <span class="meta">ЖК «Свобода» ул. Горсоветская 49 · 42 м² · 2024</span>
       </div>
     </div>
     <!-- card 5 -->
@@ -1182,7 +1250,7 @@
       </div>
       <div class="gallery-meta">
         <span class="ttl">Спальня · Рельеф «Травертин»</span>
-        <span class="meta">м. Маяковская · 22 м² · 2024</span>
+        <span class="meta">ЖК «Собрание» ул.Социалистическая 118 · 82 м² · 2024</span>
       </div>
     </div>
   </div>
@@ -1211,7 +1279,7 @@
       <div class="num-tag">01 / Гарантия</div>
       <div class="ico"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2 L20 6 V12 C20 17 16 21 12 22 C8 21 4 17 4 12 V6 Z"></path><path d="M9 12 l2 2 l4 -4"></path></svg></div>
       <h4>3 года<br>по договору</h4>
-      <p>Письменная гарантия на гидроизоляцию и адгезию декоративных слоёв. Возвращаемся и переделываем.</p>
+      <p>Письменная гарантия на гидроизоляцию и адгезию декоративных слоёв. Возвращаемся и переделываем. <a href="#" id="contractOpenAdv" style="color:var(--accent);text-decoration:underline;text-underline-offset:3px;white-space:nowrap;display:block;margin-top:12px">Типовой договор →</a></p>
     </div>
     <div class="adv">
       <div class="num-tag">02 / Срок</div>
@@ -1223,7 +1291,7 @@
       <div class="num-tag">03 / Материалы</div>
       <div class="ico"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 7 L12 3 L21 7 V17 L12 21 L3 17 Z"></path><path d="M3 7 L12 11 L21 7 M12 11 V21"></path></svg></div>
       <h4>Знаем<br>каждый состав</h4>
-      <p>Работаем с Mapei, Litokol, Sika, San Marco. Подберём под ваш бюджет и поедем за материалом сами.</p>
+      <p>Работаем с Mapei, Litokol, Sika, San Marco, Remmers. Подберём под ваш бюджет и поедем за материалом сами. Готовы работать на вашем материале, но без гарантии. </p>
     </div>
     <div class="adv">
       <div class="num-tag">04 / Чистота</div>
@@ -1248,7 +1316,7 @@
   <div class="quiz-wrap">
     <aside class="quiz-side">
       <h3>Замер бесплатно.<br>Смета — за 1 день.</h3>
-      <p>Приедем в любой район Москвы и МО. Замерим, посоветуем материалы, рассчитаем стоимость по факту.</p>
+      <p>Приедем в любой район Ростов-на-Дону и Ростовской области. Замерим, посоветуем материалы, рассчитаем стоимость по факту.</p>
       <div class="quiz-bonus">
         <div class="icon">★</div>
         <div class="txt"><b>Бонус за квиз</b>Скидка 7% на материалы при заказе до конца месяца</div>
@@ -1320,9 +1388,9 @@
 <footer class="footer">
   <div class="foot-grid">
     <div class="foot-brand">
-      <div class="h-display">Мастерская стен</div>
-      <p>Бригада из 6 мастеров. Москва и Московская область. Работаем на материалах Mapei, Litokol, Sika, San Marco.</p>
-      <div class="phone-big"><a href="tel:+74952401844" onclick="if(typeof ym==='function')ym(0,'reachGoal','phone_click')" style="color:inherit;text-decoration:none">+7 (495) 240-18-44</a></div>
+      <div class="h-display">ДОН ГИДРО ДЕКОР</div>
+      <p>Бригада из 6 мастеров. Ростов-на-Дону и Ростовская область. Работаем на материалах Mapei, Litokol, Sika, San Marco, Remmers.</p>
+      <div class="phone-big"><a href="tel:+79604451369" onclick="if(typeof ym==='function')ym(0,'reachGoal','phone_click')" style="color:inherit;text-decoration:none">+7 (960) 445-13-69</a></div>
     </div>
     <div>
       <h5>Услуги</h5>
@@ -1339,13 +1407,13 @@
         <li><a href="#gallery">Портфолио</a></li>
         <li><a href="#adv">Гарантия</a></li>
         <li><a href="#quiz">Заявка</a></li>
-        <li><a href="#">Договор</a></li>
+        <li><a href="#" id="contractOpen">Договор</a></li>
       </ul>
     </div>
     <div>
       <h5>Контакты</h5>
       <ul>
-        <li>Москва, ул. Складочная, 6</li>
+        <li>Ростов-на-Дону, ул. Королева 4, оф.4 (удаленный)</li>
         <li>Пн–Сб · 09:00 — 21:00</li>
         <li><a href="mailto:hi@masterstreen.ru">hi@masterstreen.ru</a></li>
         <li>Telegram · WhatsApp</li>
@@ -1353,8 +1421,8 @@
     </div>
   </div>
   <div class="foot-bottom">
-    <span>© 2021 — 2026 Мастерская стен</span>
-    <span>Москва · ОГРН 1207700000001</span>
+    <span>© 2021 — 2026 ДОН ГИДРО ДЕКОР</span>
+    <span>Ростов-на-Дону · ИНН 616118495288 </span>
   </div>
 </footer>
 
@@ -1641,14 +1709,14 @@
             dots.forEach(d=>{d.classList.remove('active');d.classList.add('done')});
             if(typeof ym==='function') ym(0,'reachGoal','quiz_submit');
           } else {
-            successEl.innerHTML = '<div class="check" style="background:#c0502a">!</div><h4>Ошибка отправки</h4><p>Позвоните нам: <a href="tel:+74952401844" style="color:var(--accent)">+7 (495) 240-18-44</a></p>';
+            successEl.innerHTML = '<div class="check" style="background:#c0502a">!</div><h4>Ошибка отправки</h4><p>Позвоните нам: <a href="tel:+74952401844" style="color:var(--accent)">+7 (960) 445-13-69</a></p>';
             successEl.classList.add('active');
           }
         })
         .catch(()=>{
           actionsEl.style.display='none';
           steps.forEach(s=>s.classList.remove('active'));
-          successEl.innerHTML = '<div class="check" style="background:#c0502a">!</div><h4>Нет связи</h4><p>Позвоните нам: <a href="tel:+74952401844" style="color:var(--accent)">+7 (495) 240-18-44</a></p>';
+          successEl.innerHTML = '<div class="check" style="background:#c0502a">!</div><h4>Нет связи</h4><p>Позвоните нам: <a href="tel:+79604451369" style="color:var(--accent)">+7 (960) 445-13-69</a></p>';
           successEl.classList.add('active');
         });
       }
@@ -1658,5 +1726,125 @@
   })();
 </script>
 
+<script>
+  /* ===== MODAL CONTRACT ===== */
+  document.addEventListener('DOMContentLoaded', function(){
+    const modal   = document.getElementById('contractModal');
+    const openBtn = document.getElementById('contractOpen');
+    const close1  = document.getElementById('contractClose');
+    const close2  = document.getElementById('contractCloseBtn');
+
+    function openModal(e){
+      if(e) e.preventDefault();
+      modal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeModal(){
+      modal.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    openBtn.addEventListener('click', openModal);
+    const openBtnAdv = document.getElementById('contractOpenAdv');
+    if(openBtnAdv) openBtnAdv.addEventListener('click', openModal);
+    close1.addEventListener('click', closeModal);
+    close2.addEventListener('click', closeModal);
+
+    // Закрытие по клику на оверлей
+    modal.addEventListener('click', function(e){
+      if(e.target === modal) closeModal();
+    });
+
+    // Закрытие по Escape
+    document.addEventListener('keydown', function(e){
+      if(e.key === 'Escape' && modal.classList.contains('open')) closeModal();
+    });
+  });
+</script>
+
+
+<!-- ===== MODAL: ДОГОВОР ===== -->
+<div class="modal-overlay" id="contractModal" role="dialog" aria-modal="true" aria-labelledby="contractTitle">
+  <div class="modal-box">
+    <div class="modal-head">
+      <h3 id="contractTitle">Типовой <span>договор</span></h3>
+      <button class="modal-close" id="contractClose" aria-label="Закрыть">✕</button>
+    </div>
+    <div class="modal-body">
+
+      <div class="modal-section">
+        <h4>1. Стороны договора</h4>
+        <p><strong>Исполнитель:</strong> ДОН ГИДРО ДЕКОР, г. Ростов-на-Дону — далее «Исполнитель».</p>
+        <p><strong>Заказчик:</strong> физическое или юридическое лицо, принявшее настоящие условия — далее «Заказчик».</p>
+      </div>
+
+      <div class="modal-section">
+        <h4>2. Предмет договора</h4>
+        <p>Исполнитель выполняет отделочные работы (гидроизоляция, декоративная штукатурка или комплекс «под ключ») на объекте Заказчика в соответствии с согласованной <strong>сметой и техническим заданием</strong>, являющимися неотъемлемой частью договора.</p>
+      </div>
+
+      <div class="modal-section">
+        <h4>3. Сроки выполнения</h4>
+        <p>Дата начала и дата сдачи объекта фиксируются в договоре. При нарушении сроков по вине Исполнителя Заказчик вправе потребовать пересчёт итоговой суммы — <strong>0,1% от стоимости работ за каждый день просрочки</strong>, но не более 5%.</p>
+      </div>
+
+      <div class="modal-section">
+        <h4>4. Стоимость и порядок оплаты</h4>
+        <ul>
+          <li>Аванс — <strong>30%</strong> от суммы работ до начала выполнения.</li>
+          <li>Основная часть — <strong>50%</strong> после выполнения основного объёма.</li>
+          <li>Финальный платёж — <strong>20%</strong> после подписания акта приёмки-сдачи.</li>
+        </ul>
+        <p>Стоимость материалов согласовывается отдельно и включается в смету.</p>
+      </div>
+
+      <div class="modal-section">
+        <h4>5. Гарантийные обязательства</h4>
+        <p>Исполнитель предоставляет гарантию на выполненные работы сроком <strong>3 года</strong> с даты подписания акта. Гарантия распространяется на дефекты, возникшие по вине технологии нанесения или применённых материалов.</p>
+        <p>Гарантия не распространяется на повреждения, возникшие вследствие механического воздействия, затопления третьими лицами или нарушения условий эксплуатации.</p>
+      </div>
+
+      <div class="modal-section">
+        <h4>6. Обязательства исполнителя</h4>
+        <ul>
+          <li>Выполнить работы качественно, в срок и в соответствии с техническим заданием.</li>
+          <li>Соблюдать технологические регламенты и нормы СНиП.</li>
+          <li>Обеспечить уборку рабочей зоны после завершения каждого этапа.</li>
+          <li>Информировать Заказчика об изменениях, влияющих на сроки или стоимость.</li>
+        </ul>
+      </div>
+
+      <div class="modal-section">
+        <h4>7. Обязательства заказчика</h4>
+        <ul>
+          <li>Обеспечить доступ к объекту в рабочее время (09:00–20:00, пн–сб).</li>
+          <li>Своевременно производить оплату согласно графику.</li>
+          <li>Согласовать смету и техническое задание до начала работ.</li>
+        </ul>
+      </div>
+
+      <div class="modal-section">
+        <h4>8. Приёмка работ</h4>
+        <p>После завершения работ стороны подписывают <strong>Акт приёмки-сдачи</strong>. При наличии замечаний Исполнитель устраняет их в течение 5 рабочих дней. Уклонение Заказчика от подписания акта более 10 рабочих дней приравнивается к молчаливому принятию работ.</p>
+      </div>
+
+      <div class="modal-section">
+        <h4>9. Разрешение споров</h4>
+        <p>Споры решаются путём переговоров. При недостижении согласия — в суде по месту нахождения Исполнителя (г. Ростов-на-Дону) в соответствии с законодательством РФ.</p>
+      </div>
+
+      <div class="modal-section">
+        <h4>10. Прочие условия</h4>
+        <p>Представленные условия носят <strong>ознакомительный характер</strong> и отражают типичные параметры нашей работы. Настоящий текст не является публичной офертой.</p>
+        <p>Все финансовые и организационные вопросы — аванс, сроки, материалы — согласовываются <strong>на личной встрече</strong>. Договор оформляется в письменном виде и подписывается обеими сторонами до начала работ.</p>
+      </div>
+
+    </div>
+    <div class="modal-foot">
+      <button class="modal-btn ghost" id="contractCloseBtn">Закрыть</button>
+      <button class="modal-btn primary" onclick="document.getElementById('contractModal').classList.remove('open');document.body.style.overflow='';document.getElementById('quiz').scrollIntoView({behavior:'smooth'})">Оставить заявку →</button>
+    </div>
+  </div>
+</div>
 
 </body></html>
