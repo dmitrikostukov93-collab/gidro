@@ -1496,6 +1496,8 @@
         </div>
 
         <div class="quiz-phone" style="margin-top:28px">
+          <!-- honeypot: скрыто от людей, боты заполняют — заявка отклоняется -->
+          <input type="text" id="website" name="website" style="display:none" tabindex="-1" autocomplete="off">
           <input type="tel" id="phone" placeholder="+7 (___) ___-__-__">
           <input type="text" id="name" placeholder="Как к вам обращаться?">
           <label class="agree"><input type="checkbox" id="agree" checked=""> Согласен на обработку персональных данных. Не передаём третьим лицам.</label>
@@ -1826,6 +1828,7 @@
           area: answers.area || '',
           when: answers.when || '',
           phone: phoneI.value,
+            website: document.getElementById('website').value,
           name: nameI.value
         };
         fetch('/api/submit', {
