@@ -295,31 +295,6 @@ input{font-family:inherit}
 .faq-answer{padding:0 24px 20px;font-size:15px;color:var(--text-dim);line-height:1.7;border-top:1px solid var(--border)}
 .faq-answer strong{color:var(--cream)}
 
-/* CTA SECTION */
-.cta-section{
-  background:linear-gradient(135deg,#171c2a 0%,#1e2535 100%);
-  border-top:1px solid var(--border);
-}
-.cta-inner{
-  display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center;flex-wrap:wrap;
-}
-@media(max-width:640px){.cta-inner{grid-template-columns:1fr}}
-.cta-inner h2{font-family:'Russo One',sans-serif;font-size:clamp(24px,3.5vw,44px);text-transform:uppercase;line-height:1.05;margin-bottom:12px}
-.cta-inner h2 em{font-style:normal;color:var(--accent)}
-.cta-inner p{color:var(--text-dim);font-size:16px;max-width:480px}
-.cta-block{display:flex;flex-direction:column;gap:12px;align-items:flex-end}
-@media(max-width:640px){.cta-block{align-items:flex-start}}
-.cta-note{font-size:12px;color:var(--text-dim);font-family:'Oswald',sans-serif;letter-spacing:.1em;text-transform:uppercase;text-align:right}
-@media(max-width:640px){.cta-note{text-align:left}}
-
-/* QUIZ INLINE */
-.quiz-strip{
-  background:rgba(192,80,42,0.08);border:1px solid rgba(192,80,42,0.25);
-  padding:32px 36px;display:flex;gap:32px;align-items:center;flex-wrap:wrap;
-  margin-top:52px;
-}
-.quiz-strip .txt h3{font-family:'Russo One',sans-serif;font-size:22px;text-transform:uppercase;margin-bottom:6px}
-.quiz-strip .txt p{color:var(--text-dim);font-size:15px}
 
 /* FOOTER */
 .footer{background:#11151f;border-top:1px solid var(--border);padding:60px 6vw 32px}
@@ -586,29 +561,28 @@ input{font-family:inherit}
 </section>
 
 <!-- CTA -->
-<section class="section cta-section" id="quiz">
-  <div class="cta-inner">
-    <div>
-      <h2>Бесплатный замер<br><em>и смета</em> за 24 часа</h2>
-      <p>Приедем, осмотрим, посоветуем материал. Смета с разбивкой по работам — в течение суток. Ни к чему не обязывает.</p>
-      <div class="quiz-strip">
-        <div class="txt">
-          <h3>Оставить заявку</h3>
-          <p>Перезвоним за 15 минут. Работаем пн–сб с 09:00 до 21:00.</p>
-        </div>
-        <div style="display:flex;flex-direction:column;gap:10px;min-width:280px">
-          <input type="tel" id="lead-phone" placeholder="+7 (___) ___-__-__" style="padding:14px 18px;background:var(--bg-card);border:1px solid var(--border);color:var(--cream);font-size:16px;outline:none;transition:border-color .2s" onfocus="this.style.borderColor='rgba(192,80,42,0.6)'" onblur="this.style.borderColor='rgba(237,234,229,0.08)'">
-          <input type="text" id="lead-name" placeholder="Как к вам обращаться?" style="padding:14px 18px;background:var(--bg-card);border:1px solid var(--border);color:var(--cream);font-size:16px;outline:none;transition:border-color .2s" onfocus="this.style.borderColor='rgba(192,80,42,0.6)'" onblur="this.style.borderColor='rgba(237,234,229,0.08)'">
-          <!-- Honeypot: скрытое поле — боты заполнят, люди нет -->
-          <input type="text" id="lead-website" name="website" style="display:none" tabindex="-1" autocomplete="off">
-          <button onclick="submitLead()" style="padding:16px;background:var(--accent);color:#fff;font-family:'Oswald',sans-serif;font-weight:600;letter-spacing:.16em;text-transform:uppercase;font-size:14px;border:none;cursor:pointer;transition:background .2s" onmouseover="this.style.background='#d96134'" onmouseout="this.style.background='#c0502a'">Отправить заявку →</button>
-          <p id="lead-msg" style="font-size:13px;color:var(--text-dim);text-align:center;min-height:18px"></p>
-        </div>
-      </div>
-    </div>
-    <div class="cta-block">
-      <a href="tel:+79604451369" class="btn-primary" style="white-space:nowrap">+7 (960) 445-13-69</a>
-      <div class="cta-note">Пн–Сб · 09:00 — 21:00</div>
+<section class="section" style="background:linear-gradient(135deg,#171c2a 0%,#1a2030 100%);border-top:1px solid var(--border);text-align:center">
+  <div style="max-width:620px;margin:0 auto">
+    <div class="section-eyebrow" style="justify-content:center">Следующий шаг</div>
+    <h2 class="section-title" style="margin-bottom:16px">Хотите <em>точную цену</em><br>на вашу ванную?</h2>
+    <p style="color:var(--text-dim);font-size:17px;margin-bottom:40px;line-height:1.65">
+      Пройдите короткий квиз — 3 вопроса за 30 секунд. Мы рассчитаем стоимость и перезвоним с конкретной сметой. Без обязательств.
+    </p>
+    <a href="/#quiz" style="
+      display:inline-flex;align-items:center;gap:14px;
+      padding:20px 40px;
+      background:var(--accent);color:#fff;
+      font-family:'Oswald',sans-serif;font-weight:600;letter-spacing:.18em;text-transform:uppercase;font-size:15px;
+      transition:background .2s,transform .2s;
+      text-decoration:none;
+    " onmouseover="this.style.background='#d96134';this.style.transform='translateY(-3px)'" onmouseout="this.style.background='#c0502a';this.style.transform='translateY(0)'">
+      Рассчитать стоимость <span style="font-size:20px;line-height:1">→</span>
+    </a>
+    <p style="margin-top:20px;font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--text-dim)">
+      Гидроизоляция ванной — от 1 200 руб/м² · замер бесплатно
+    </p>
+    <div style="margin-top:48px;padding-top:32px;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:center;gap:12px">
+      <a href="/" style="font-family:'Oswald',sans-serif;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--text-dim);transition:color .2s" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--text-dim)'">← Все услуги ДОН ГИДРО ДЕКОР</a>
     </div>
   </div>
 </section>
@@ -655,54 +629,6 @@ input{font-family:inherit}
   </div>
 </footer>
 
-<script>
-function submitLead() {
-  var phone = document.getElementById('lead-phone').value.trim();
-  var name  = document.getElementById('lead-name').value.trim();
-  var honey = document.getElementById('lead-website').value;
-  var msg   = document.getElementById('lead-msg');
-
-  if (!phone || phone.replace(/\D/g, '').length < 10) {
-    msg.style.color = '#c0502a';
-    msg.textContent = 'Введите номер телефона';
-    return;
-  }
-
-  var btn = event.currentTarget || document.querySelector('[onclick="submitLead()"]');
-  if (btn) { btn.disabled = true; btn.textContent = 'Отправляем…'; }
-
-  fetch('/api/submit', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      phone:   phone,
-      name:    name,
-      goal:    'hydro',
-      area:    '',
-      when:    '',
-      website: honey
-    })
-  })
-  .then(function(r) { return r.json(); })
-  .then(function(data) {
-    if (data.ok) {
-      msg.style.color = '#5DCAA5';
-      msg.textContent = 'Заявка принята — перезвоним за 15 минут';
-      if (typeof ym === 'function') ym(0, 'reachGoal', 'lead_vanny');
-      if (btn) { btn.textContent = 'Заявка отправлена ✓'; }
-    } else {
-      msg.style.color = '#c0502a';
-      msg.textContent = data.error || 'Ошибка — позвоните нам напрямую';
-      if (btn) { btn.disabled = false; btn.textContent = 'Отправить заявку →'; }
-    }
-  })
-  .catch(function() {
-    msg.style.color = '#c0502a';
-    msg.textContent = 'Ошибка сети — позвоните нам напрямую';
-    if (btn) { btn.disabled = false; btn.textContent = 'Отправить заявку →'; }
-  });
-}
-</script>
 
 </body>
 </html>
