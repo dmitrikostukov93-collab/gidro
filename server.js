@@ -34,6 +34,9 @@ app.get('/', (req, res) => {
 app.use('/assets', express.static(path.join(__dirname, 'assets')));
 app.get('/robots.txt',  (req, res) => res.sendFile(path.join(__dirname, 'robots.txt')));
 app.get('/sitemap.xml', (req, res) => res.sendFile(path.join(__dirname, 'sitemap.xml')));
+app.get('/dekorativnaya-shtukaturka-svoimi-rukami.html', (req, res) => {
+  res.sendFile(path.join(__dirname, 'dekorativnaya-shtukaturka-svoimi-rukami.html'));
+});
 
 // ── Форма заявки ──────────────────────────────────────────────────────────────
 app.post('/api/submit', submitLimiter, async (req, res) => {
