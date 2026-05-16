@@ -40,6 +40,9 @@ app.get('/dekorativnaya-shtukaturka-svoimi-rukami.html', (req, res) => {
 app.get('/gidroizolyaciya-vanny-rostov.html', (req, res) => {
   res.sendFile(path.join(__dirname, 'gidroizolyaciya-vanny-rostov.html'));
 });
+app.get('/gidroizolyaciya-fundamenta.html', (req, res) => {
+  res.sendFile(path.join(__dirname, 'gidroizolyaciya-fundamenta.html'));
+});
 
 // ── Форма заявки ──────────────────────────────────────────────────────────────
 app.post('/api/submit', submitLimiter, async (req, res) => {
