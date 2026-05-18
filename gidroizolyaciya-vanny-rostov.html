@@ -297,23 +297,26 @@ input{font-family:inherit}
 
 
 /* FOOTER */
-.footer{background:#11151f;border-top:1px solid var(--border);padding:60px 6vw 32px}
-.foot-grid{display:grid;grid-template-columns:1.5fr repeat(3,1fr);gap:40px;margin-bottom:48px}
-@media(max-width:900px){.foot-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:560px){.foot-grid{grid-template-columns:1fr}}
-.foot-brand .h-display{font-size:18px;margin-bottom:12px}
-.foot-brand p{font-size:14px;color:var(--text-dim);max-width:260px;line-height:1.65;margin-bottom:20px}
-.foot-brand .phone-big{font-family:'Russo One',sans-serif;font-size:22px;color:var(--cream)}
+.footer{background:#0f1320;padding:80px 6vw 32px;border-top:1px solid var(--border)}
+.foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:48px;margin-bottom:60px}
+.foot-grid h5{font-family:'Oswald',sans-serif;font-weight:600;letter-spacing:.2em;text-transform:uppercase;font-size:12px;margin-bottom:18px;color:var(--text-dim)}
+.foot-grid ul{list-style:none;display:flex;flex-direction:column;gap:10px;font-size:14px}
+.foot-grid ul li{color:var(--text-dim)}
+.foot-grid ul a{color:var(--text-dim);transition:color .2s}
+.foot-grid ul a:hover{color:var(--accent)}
+.foot-brand .h-display{font-size:24px;margin-bottom:16px}
+.foot-brand p{color:var(--text-dim);font-size:14px;max-width:320px}
+.foot-brand .phone-big{font-family:'Russo One',sans-serif;font-size:24px;color:var(--cream);margin-top:18px;letter-spacing:.02em}
+.foot-messenger{display:flex;gap:8px;margin-top:2px;flex-wrap:wrap}
+.foot-msg-btn{display:inline-flex;align-items:center;gap:7px;padding:7px 12px;border:1px solid var(--border);font-family:'Oswald',sans-serif;font-weight:600;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--text-dim);transition:color .2s,border-color .2s,background .2s}
+.foot-msg-btn:hover{color:var(--cream);border-color:var(--accent);background:rgba(192,80,42,.08)}
+.foot-msg-btn svg{width:14px;height:14px;flex-shrink:0}
 /* ===== SOCIAL LINKS ===== */
 .social-links{display:flex;gap:10px;margin-top:20px}
 .social-link{width:36px;height:36px;border:1px solid rgba(237,234,229,.2);display:grid;place-items:center;color:var(--text-dim);transition:color .2s,border-color .2s,background .2s;flex-shrink:0}
 .social-link svg{width:18px;height:18px}
 .social-link:hover{color:var(--cream);border-color:var(--accent);background:rgba(192,80,42,.1)}
-.footer h5{font-family:'Oswald',sans-serif;font-weight:600;letter-spacing:.18em;text-transform:uppercase;font-size:12px;color:var(--text-dim);margin-bottom:16px}
-.footer ul{list-style:none;display:flex;flex-direction:column;gap:10px}
-.footer ul li,.footer ul a{font-size:14px;color:var(--text-dim);transition:color .2s}
-.footer ul a:hover{color:var(--accent)}
-.foot-bottom{padding-top:28px;border-top:1px solid var(--border);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:13px;color:var(--text-dim);font-family:'Oswald',sans-serif;letter-spacing:.06em}
+.foot-bottom{padding-top:30px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;font-size:12px;color:var(--text-dim);font-family:'Oswald',sans-serif;letter-spacing:.16em;text-transform:uppercase}
 
 @media(max-width:768px){
   .nav{padding:14px 20px}
@@ -584,9 +587,6 @@ input{font-family:inherit}
         <a href="https://vk.com/dongidrodecor" class="social-link" target="_blank" rel="noopener noreferrer" title="ВКонтакте">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M15.07 2H8.93C3.33 2 2 3.33 2 8.93v6.14C2 20.67 3.33 22 8.93 22h6.14C20.67 22 22 20.67 22 15.07V8.93C22 3.33 20.67 2 15.07 2zm3.08 13.5h-1.7c-.64 0-.84-.51-2-1.67-1-.98-1.44-.98-1.69-.98-.34 0-.44.1-.44.57v1.53c0 .41-.13.65-1.21.65-1.78 0-3.75-1.07-5.14-3.07C4.58 9.86 4 7.84 4 7.39c0-.25.1-.48.57-.48h1.7c.43 0 .59.2.75.66.83 2.4 2.2 4.5 2.77 4.5.21 0 .31-.1.31-.65V9.38c-.07-1.16-.68-1.26-.68-1.67 0-.2.16-.41.43-.41h2.68c.36 0 .49.2.49.62v3.34c0 .36.16.49.27.49.21 0 .39-.13.78-.52 1.2-1.35 2.06-3.43 2.06-3.43.11-.25.31-.48.74-.48h1.7c.51 0 .62.26.51.62-.21.97-2.27 3.9-2.27 3.9-.18.29-.25.41 0 .74.18.25.77.77 1.16 1.23.72.82 1.27 1.51 1.42 1.99.16.47-.08.71-.55.71z"/></svg>
         </a>
-        <a href="https://max.ru/dongidrodecor" class="social-link" target="_blank" rel="noopener noreferrer" title="MAX мессенджер">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M4 2h16c1.1 0 2 .9 2 2v13c0 1.1-.9 2-2 2H8L2 23V4c0-1.1.9-2 2-2zM6 15V7h2l4 5 4-5h2v8h-2v-5l-4 5-4-5v5H6z"/></svg>
-        </a>
         <a href="https://www.youtube.com/@dongidrodecor" class="social-link" target="_blank" rel="noopener noreferrer" title="YouTube">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7s-.3-2-1.2-2.8c-1.1-1.2-2.4-1.2-3-1.3C16.6 2.8 12 2.8 12 2.8s-4.6 0-6.8.2c-.6.1-1.9.1-3 1.3C1.3 5 1 7 1 7S.7 9.2.7 11.4v2c0 2.2.3 4.4.3 4.4s.3 2 1.2 2.8c1.1 1.2 2.6 1.1 3.3 1.2C7.3 22 12 22 12 22s4.6 0 6.8-.2c.6-.1 1.9-.1 3-1.3.9-.8 1.2-2.8 1.2-2.8s.3-2.2.3-4.4v-2C23.3 9.2 23 7 23 7zM9.75 15.5v-7l6.5 3.5-6.5 3.5z"/></svg>
         </a>
@@ -619,7 +619,22 @@ input{font-family:inherit}
         <li>Ростов-на-Дону, ул. Королева 4, оф.4 (удалённый)</li>
         <li>Пн–Сб · 09:00 — 21:00</li>
         <li><a href="mailto:info@dgd61.ru">info@dgd61.ru</a></li>
-        <li>Telegram · WhatsApp</li>
+        <li>
+          <div class="foot-messenger">
+            <a href="https://t.me/+79604451369" class="foot-msg-btn" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.833.941z"/></svg>
+              Telegram
+            </a>
+            <a href="https://wa.me/79604451369" class="foot-msg-btn" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              WhatsApp
+            </a>
+            <a href="https://max.ru/dongidrodecor" class="foot-msg-btn" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M4 2h16c1.1 0 2 .9 2 2v13c0 1.1-.9 2-2 2H8L2 23V4c0-1.1.9-2 2-2zM6 15V7h2l4 5 4-5h2v8h-2v-5l-4 5-4-5v5H6z"/></svg>
+              MAX
+            </a>
+          </div>
+        </li>
       </ul>
     </div>
   </div>
