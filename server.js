@@ -43,6 +43,9 @@ app.get('/gidroizolyaciya-vanny-rostov.html', (req, res) => {
 app.get('/gidroizolyaciya-fundamenta.html', (req, res) => {
   res.sendFile(path.join(__dirname, 'gidroizolyaciya-fundamenta.html'));
 });
+app.get('/galereya.html', (req, res) => {
+  res.sendFile(path.join(__dirname, 'galereya.html'));
+});
 
 // ── Форма заявки ──────────────────────────────────────────────────────────────
 app.post('/api/submit', submitLimiter, async (req, res) => {
