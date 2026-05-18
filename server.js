@@ -46,6 +46,9 @@ app.get('/gidroizolyaciya-fundamenta.html', (req, res) => {
 app.get('/galereya.html', (req, res) => {
   res.sendFile(path.join(__dirname, 'galereya.html'));
 });
+app.get('/kontakty.html', (req, res) => {
+  res.sendFile(path.join(__dirname, 'kontakty.html'));
+});
 
 // ── Форма заявки ──────────────────────────────────────────────────────────────
 app.post('/api/submit', submitLimiter, async (req, res) => {
