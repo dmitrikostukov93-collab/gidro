@@ -355,6 +355,50 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 /* hidden cards for filter */
 .obj-card[hidden]{display:none}
 
+/* ===== FACTURES SECTION ===== */
+.factures-section{padding:60px 6vw 80px;border-top:1px solid var(--border)}
+.factures-head{margin-bottom:36px}
+.factures-head .h-display{font-size:clamp(26px,4vw,46px);margin-bottom:12px}
+.factures-head p{color:var(--text-dim);font-size:16px;max-width:600px;line-height:1.65}
+.factures-grid{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:8px;
+  margin-bottom:40px;
+}
+@media(max-width:1000px){.factures-grid{grid-template-columns:repeat(4,1fr)}}
+@media(max-width:680px){.factures-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:400px){.factures-grid{grid-template-columns:repeat(2,1fr)}}
+.fac-tile{
+  position:relative;padding-top:100%;overflow:hidden;
+  cursor:pointer;border:1px solid var(--border);
+  background:var(--bg-card);
+  transition:border-color .25s,transform .25s;
+}
+.fac-tile:hover{border-color:rgba(192,80,42,.55);transform:scale(1.02);z-index:1}
+.fac-tile img{
+  position:absolute;inset:0;width:100%;height:100%;
+  object-fit:cover;transition:transform .45s;
+}
+.fac-tile:hover img{transform:scale(1.08)}
+.factures-cta{
+  display:flex;align-items:center;justify-content:space-between;gap:24px;
+  flex-wrap:wrap;
+  padding:32px 36px;
+  border:1px solid var(--border);
+  background:var(--bg-card);
+}
+.factures-cta p{color:var(--text-dim);font-size:15px;max-width:520px;line-height:1.6;margin:0}
+.factures-cta .btn-cta{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:13px 26px;
+  background:var(--accent);color:#fff;
+  font-family:'Oswald',sans-serif;font-weight:600;
+  font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+  white-space:nowrap;transition:background .2s;
+}
+.factures-cta .btn-cta:hover{background:var(--accent-bright)}
+
 /* ===== LIGHTBOX ===== */
 .lb-overlay{
   display:none;position:fixed;inset:0;z-index:9000;
@@ -822,6 +866,45 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
   </div><!-- /objects-grid -->
 </section>
 
+<!-- ===== КАТАЛОГ ФАКТУР ===== -->
+<section class="factures-section" id="faktury">
+  <div class="factures-head">
+    <div class="h-display">Каталог <em>фактур</em></div>
+    <p>Образцы декоративных покрытий — выберите понравившуюся фактуру и мы реализуем её в вашем интерьере.</p>
+  </div>
+
+  <div class="factures-grid" id="factures-grid">
+    <button class="fac-tile" data-idx="0"><img src="assets/images/fotomatherial/Factures/foto1 (1).jpg"  alt="Образец фактуры 1"  loading="lazy"></button>
+    <button class="fac-tile" data-idx="1"><img src="assets/images/fotomatherial/Factures/foto1 (4).jpg"  alt="Образец фактуры 2"  loading="lazy"></button>
+    <button class="fac-tile" data-idx="2"><img src="assets/images/fotomatherial/Factures/foto1 (5).jpg"  alt="Образец фактуры 3"  loading="lazy"></button>
+    <button class="fac-tile" data-idx="3"><img src="assets/images/fotomatherial/Factures/foto1 (6).jpg"  alt="Образец фактуры 4"  loading="lazy"></button>
+    <button class="fac-tile" data-idx="4"><img src="assets/images/fotomatherial/Factures/foto1 (7).jpg"  alt="Образец фактуры 5"  loading="lazy"></button>
+    <button class="fac-tile" data-idx="5"><img src="assets/images/fotomatherial/Factures/foto1 (11).jpg" alt="Образец фактуры 6"  loading="lazy"></button>
+    <button class="fac-tile" data-idx="6"><img src="assets/images/fotomatherial/Factures/foto1 (12).jpg" alt="Образец фактуры 7"  loading="lazy"></button>
+    <button class="fac-tile" data-idx="7"><img src="assets/images/fotomatherial/Factures/foto1 (13).jpg" alt="Образец фактуры 8"  loading="lazy"></button>
+    <button class="fac-tile" data-idx="8"><img src="assets/images/fotomatherial/Factures/foto1 (14).jpg" alt="Образец фактуры 9"  loading="lazy"></button>
+    <button class="fac-tile" data-idx="9"><img src="assets/images/fotomatherial/Factures/foto1 (15).jpg" alt="Образец фактуры 10" loading="lazy"></button>
+    <button class="fac-tile" data-idx="10"><img src="assets/images/fotomatherial/Factures/foto1 (16).jpg" alt="Образец фактуры 11" loading="lazy"></button>
+    <button class="fac-tile" data-idx="11"><img src="assets/images/fotomatherial/Factures/foto1 (18).jpg" alt="Образец фактуры 12" loading="lazy"></button>
+    <button class="fac-tile" data-idx="12"><img src="assets/images/fotomatherial/Factures/foto1 (26).jpg" alt="Образец фактуры 13" loading="lazy"></button>
+    <button class="fac-tile" data-idx="13"><img src="assets/images/fotomatherial/Factures/foto1 (45).jpg" alt="Образец фактуры 14" loading="lazy"></button>
+    <button class="fac-tile" data-idx="14"><img src="assets/images/fotomatherial/Factures/foto1 (46).jpg" alt="Образец фактуры 15" loading="lazy"></button>
+    <button class="fac-tile" data-idx="15"><img src="assets/images/fotomatherial/Factures/foto1 (57).jpg" alt="Образец фактуры 16" loading="lazy"></button>
+    <button class="fac-tile" data-idx="16"><img src="assets/images/fotomatherial/Factures/foto1 (58).jpg" alt="Образец фактуры 17" loading="lazy"></button>
+    <button class="fac-tile" data-idx="17"><img src="assets/images/fotomatherial/Factures/foto1 (59).jpg" alt="Образец фактуры 18" loading="lazy"></button>
+    <button class="fac-tile" data-idx="18"><img src="assets/images/fotomatherial/Factures/foto1 (60).jpg" alt="Образец фактуры 19" loading="lazy"></button>
+    <button class="fac-tile" data-idx="19"><img src="assets/images/fotomatherial/Factures/foto1 (65).jpg" alt="Образец фактуры 20" loading="lazy"></button>
+    <button class="fac-tile" data-idx="20"><img src="assets/images/fotomatherial/Factures/foto1 (66).jpg" alt="Образец фактуры 21" loading="lazy"></button>
+    <button class="fac-tile" data-idx="21"><img src="assets/images/fotomatherial/Factures/foto2 (8).jpg"  alt="Образец фактуры 22" loading="lazy"></button>
+    <button class="fac-tile" data-idx="22"><img src="assets/images/fotomatherial/Factures/foto2 (11).jpg" alt="Образец фактуры 23" loading="lazy"></button>
+  </div>
+
+  <div class="factures-cta">
+    <p>Нравится фактура? Обсудим детали, покажем образцы вживую и рассчитаем стоимость под ваш объект.</p>
+    <a href="/#quiz" class="btn-cta">Оставить заявку →</a>
+  </div>
+</section>
+
 <!-- ===== LIGHTBOX ===== -->
 <div class="lb-overlay" id="lb" role="dialog" aria-modal="true" aria-label="Просмотр объекта">
   <button class="lb-close" id="lb-close" aria-label="Закрыть">✕</button>
@@ -1038,6 +1121,60 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
     const dx = e.changedTouches[0].clientX - touchX;
     if(Math.abs(dx) > 40){ dx < 0 ? goTo(cur+1) : goTo(cur-1); }
     touchX = null;
+  });
+
+  /* ---- ФАКТУРЫ: открытие по клику на тайл ---- */
+  const FACTURE_PHOTOS = [
+    'assets/images/fotomatherial/Factures/foto1 (1).jpg',
+    'assets/images/fotomatherial/Factures/foto1 (4).jpg',
+    'assets/images/fotomatherial/Factures/foto1 (5).jpg',
+    'assets/images/fotomatherial/Factures/foto1 (6).jpg',
+    'assets/images/fotomatherial/Factures/foto1 (7).jpg',
+    'assets/images/fotomatherial/Factures/foto1 (11).jpg',
+    'assets/images/fotomatherial/Factures/foto1 (12).jpg',
+    'assets/images/fotomatherial/Factures/foto1 (13).jpg',
+    'assets/images/fotomatherial/Factures/foto1 (14).jpg',
+    'assets/images/fotomatherial/Factures/foto1 (15).jpg',
+    'assets/images/fotomatherial/Factures/foto1 (16).jpg',
+    'assets/images/fotomatherial/Factures/foto1 (18).jpg',
+    'assets/images/fotomatherial/Factures/foto1 (26).jpg',
+    'assets/images/fotomatherial/Factures/foto1 (45).jpg',
+    'assets/images/fotomatherial/Factures/foto1 (46).jpg',
+    'assets/images/fotomatherial/Factures/foto1 (57).jpg',
+    'assets/images/fotomatherial/Factures/foto1 (58).jpg',
+    'assets/images/fotomatherial/Factures/foto1 (59).jpg',
+    'assets/images/fotomatherial/Factures/foto1 (60).jpg',
+    'assets/images/fotomatherial/Factures/foto1 (65).jpg',
+    'assets/images/fotomatherial/Factures/foto1 (66).jpg',
+    'assets/images/fotomatherial/Factures/foto2 (8).jpg',
+    'assets/images/fotomatherial/Factures/foto2 (11).jpg',
+  ];
+
+  function openFactures(startIdx){
+    photos = FACTURE_PHOTOS.slice();
+    cur    = startIdx;
+
+    // упрощённая панель: только тег + CTA
+    lbTag.textContent   = 'Каталог фактур';
+    lbTitle.textContent = '';
+    lbDesc.textContent  = 'Выберите понравившуюся фактуру — реализуем в вашем интерьере.';
+    lbProps.innerHTML   = '';
+
+    // dots
+    lbDots.innerHTML = photos.map((_,i) =>
+      `<button class="lb-dot${i===startIdx?' active':''}" data-i="${i}" aria-label="Фото ${i+1}"></button>`
+    ).join('');
+    lbDots.querySelectorAll('.lb-dot').forEach(d => {
+      d.addEventListener('click', () => goTo(+d.dataset.i));
+    });
+
+    renderPhoto();
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  document.querySelectorAll('.fac-tile').forEach(tile => {
+    tile.addEventListener('click', () => openFactures(+tile.dataset.idx));
   });
 })();
 </script>
