@@ -1073,7 +1073,11 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 
     renderPhoto();
     lb.classList.add('open');
-    document.body.style.overflow = 'hidden';
+    const sy = window.scrollY;
+    document.body.style.position = 'fixed';
+    document.body.style.top = `-${sy}px`;
+    document.body.style.width = '100%';
+    document.body.dataset.scrollY = sy;
     lb.scrollTop = 0;
   }
 
@@ -1098,7 +1102,11 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
   /* ---- close ---- */
   function closeLb(){
     lb.classList.remove('open');
-    document.body.style.overflow = '';
+    const scrollY = parseInt(document.body.dataset.scrollY || '0');
+    document.body.style.position = '';
+    document.body.style.top = '';
+    document.body.style.width = '';
+    window.scrollTo(0, scrollY);
   }
 
   /* ---- events ---- */
@@ -1176,7 +1184,11 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 
     renderPhoto();
     lb.classList.add('open');
-    document.body.style.overflow = 'hidden';
+    const sy2 = window.scrollY;
+    document.body.style.position = 'fixed';
+    document.body.style.top = `-${sy2}px`;
+    document.body.style.width = '100%';
+    document.body.dataset.scrollY = sy2;
     lb.scrollTop = 0;
   }
 
