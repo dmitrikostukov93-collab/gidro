@@ -1,2 +1,5 @@
 node_modules/
 .env
+tg_avatar.png
+assets/images/test_watermark.jpg
+*.log

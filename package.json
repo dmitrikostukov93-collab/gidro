@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "node server.js",
-    "unpack": "node unpack.js"
+    "unpack": "node unpack.js",
+    "watermark": "node watermark.js"
   },
   "dependencies": {
     "dotenv": "^16.0.0",
@@ -12,7 +13,9 @@
     "express-rate-limit": "^7.0.0",
     "helmet": "^7.0.0",
     "nodemailer": "^8.0.7",
-    "resend": "^6.12.3",
+    "resend": "^6.12.3"
+  },
+  "devDependencies": {
     "sharp": "^0.34.5"
   }
 }
