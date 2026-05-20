@@ -471,9 +471,11 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
   align-self:stretch;
 }
 @media(max-width:860px){
-  .lb-inner{flex-direction:column;gap:20px;padding:0 12px}
-  .lb-info{width:100%;border-left:none;border-top:1px solid var(--border);padding:20px 4px;align-self:auto}
-  .lb-img{max-height:55vh}
+  .lb-overlay{align-items:flex-start;justify-content:flex-start;overflow-y:auto}
+  .lb-inner{flex-direction:column;gap:20px;padding:60px 12px 40px;max-height:none;width:100%}
+  .lb-info{width:100%;border-left:none;border-top:1px solid var(--border);padding:20px 4px;align-self:auto;overflow-y:visible}
+  .lb-img{max-height:50vh}
+  .lb-counter{bottom:8px;font-size:11px}
 }
 
 .lb-obj-tag{
