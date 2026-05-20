@@ -538,13 +538,23 @@
   .hero-divider .logo{
     position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
     width:180px;height:180px;border-radius:50%;
-    overflow:hidden;
+    background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;
     border:1px solid rgba(237,234,229,0.18);
     box-shadow:0 0 0 8px rgba(30,37,53,0.6), 0 30px 60px rgba(0,0,0,0.5);
     pointer-events:auto;
   }
-  .hero-divider .logo img{
-    width:100%;height:100%;object-fit:cover;display:block;
+  .hero-divider .logo .glyph{
+    width:54px;height:54px;border:1.5px solid var(--accent);transform:rotate(45deg);
+    display:grid;place-items:center;margin-bottom:14px;
+  }
+  .hero-divider .logo .glyph::after{
+    content:"";width:14px;height:14px;background:var(--accent);
+  }
+  .hero-divider .logo .name{
+    font-family:'Russo One',sans-serif;font-size:13px;letter-spacing:.18em;color:var(--cream);text-transform:uppercase;text-align:center;line-height:1.3;
+  }
+  .hero-divider .logo .est{
+    font-family:'Oswald',sans-serif;font-size:10px;letter-spacing:.3em;color:var(--text-dim);margin-top:6px;text-transform:uppercase;
   }
 
   /* TRUST STRIP */
@@ -875,6 +885,8 @@
     .hero-divider{left:0;right:0;width:100%;height:1px;top:60vh;bottom:auto;transform:none;background:linear-gradient(90deg,transparent,var(--accent),transparent)}
     .hero.left-active .hero-divider, .hero.right-active .hero-divider{left:0;top:60vh}
     .hero-divider .logo{width:120px;height:120px}
+    .hero-divider .logo .glyph{width:36px;height:36px;margin-bottom:8px}
+    .hero-divider .logo .name{font-size:11px}
     .hero-content{padding:0 30px 60px;align-items:flex-start !important;text-align:left !important}
     .hero-cta{opacity:1 !important;transform:none !important}
     .trust{gap:20px;padding:20px;font-size:12px}
@@ -907,6 +919,9 @@
     .hero-divider{top:50vh}
     .hero.left-active .hero-divider,.hero.right-active .hero-divider{top:50vh}
     .hero-divider .logo{width:90px;height:90px}
+    .hero-divider .logo .glyph{width:28px;height:28px;margin-bottom:6px}
+    .hero-divider .logo .name{font-size:9px;letter-spacing:.1em}
+    .hero-divider .logo .est{display:none}
     .hero-content{padding:0 16px 36px}
     .hero-title{font-size:clamp(36px,10vw,48px)}
     .hero-cta{padding:12px 18px;font-size:12px}
@@ -1102,7 +1117,9 @@
   </div>
   <div class="hero-divider">
     <div class="logo">
-      <img src="/assets/logo.svg" alt="ДОН ГИДРО ДЕКОР">
+      <div class="glyph"></div>
+      <div class="name">ДОН ГИДРО<br>ДЕКОР</div>
+      <div class="est">Est. 2021</div>
     </div>
   </div>
   <div class="half right" data-side="right">
