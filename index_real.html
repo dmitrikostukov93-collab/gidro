@@ -1552,28 +1552,37 @@
     <div class="left">
       <div class="section-eyebrow"><span class="ln"></span>Отзывы клиентов</div>
       <h2 class="section-title">Нас рекомендуют<br><em>реальные клиенты</em></h2>
-      <p class="section-sub">Отзывы из 2ГИС и Яндекс Бизнеса — без модерации</p>
+      <p class="section-sub">Проверенные отзывы без модерации — в 2ГИС и Яндексе</p>
     </div>
   </div>
-  <div style="display:flex;gap:32px;justify-content:center;flex-wrap:wrap;align-items:flex-start">
-    <!-- 2ГИС -->
+  <div style="display:flex;gap:40px;justify-content:center;flex-wrap:wrap;align-items:flex-start">
+
+    <!-- 2ГИС виджет -->
     <div style="flex:0 0 auto">
-      <div style="font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--text-dim);margin-bottom:12px">2ГИС</div>
+      <div style="font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--text-dim);margin-bottom:12px;display:flex;align-items:center;gap:8px">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="11" r="4"/><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
+        2ГИС — отзывы
+      </div>
       <iframe id="big_dark_70000001114438057" frameborder="0" width="528px" height="824px" sandbox="allow-modals allow-forms allow-scripts allow-same-origin allow-popups allow-top-navigation-by-user-activation" style="max-width:calc(100vw - 40px);border:none;display:block"></iframe><script type="text/javascript">((r,u)=>{const l=document.getElementById(r);l.contentWindow.document.open(),l.contentWindow.document.write(decodeURIComponent(escape(atob(u)))),l.contentWindow.document.close()})("big_dark_70000001114438057", "PGhlYWQ+PHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiPgogICAgd2luZG93Ll9fc2l6ZV9fPSdiaWcnOwogICAgd2luZG93Ll9fdGhlbWVfXz0nZGFyayc7CiAgICB3aW5kb3cuX19icmFuY2hJZF9fPSc3MDAwMDAwMTExNDQzODA1NycKICAgIHdpbmRvdy5fX29yZ0lkX189JzcwMDAwMDAxMTE0NDM4MDU2JwogICA8L3NjcmlwdD48c2NyaXB0IGNyb3Nzb3JpZ2luPSJhbm9ueW1vdXMiIHR5cGU9Im1vZHVsZSIgc3JjPSJodHRwczovL2Rpc2suMmdpcy5jb20vd2lkZ2V0LWNvbnN0cnVjdG9yL2Fzc2V0cy9pZnJhbWUuanMiPjwvc2NyaXB0PjxsaW5rIHJlbD0ibW9kdWxlcHJlbG9hZCIgY3Jvc3NvcmlnaW49ImFub255bW91cyIgaHJlZj0iaHR0cHM6Ly9kaXNrLjJnaXMuY29tL3dpZGdldC1jb25zdHJ1Y3Rvci9hc3NldHMvZGVmYXVsdHMuanMiPjxsaW5rIHJlbD0ic3R5bGVzaGVldCIgY3Jvc3NvcmlnaW49ImFub255bW91cyIgaHJlZj0iaHR0cHM6Ly9kaXNrLjJnaXMuY29tL3dpZGdldC1jb25zdHJ1Y3Rvci9hc3NldHMvZGVmYXVsdHMuY3NzIj48L2hlYWQ+PGJvZHk+PGRpdiBpZD0iaWZyYW1lIj48L2Rpdj48L2JvZHk+")</script>
     </div>
-    <!-- Яндекс Бизнес -->
-    <div style="flex:0 0 auto">
-      <div style="font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--text-dim);margin-bottom:12px">Яндекс Бизнес</div>
-      <script src="https://yastatic.net/s3/frontend/reviews-widget/_/reviews-widget.js"></script>
-      <div id="ya-reviews-widget"></div>
-      <script>
-        YaReviewsWidget.init({
-          containerId: 'ya-reviews-widget',
-          companyId: '240359348263',
-          theme: 'dark'
-        });
-      </script>
+
+    <!-- Яндекс бейдж -->
+    <div style="flex:0 0 260px;display:flex;flex-direction:column;gap:16px">
+      <div style="font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--text-dim);display:flex;align-items:center;gap:8px">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12.254 3C8.315 3 5 6.093 5 9.985c0 3.456 2.549 5.358 4.05 6.53l.072.057L12 22l2.878-5.428.072-.057C16.451 15.343 19 13.44 19 9.985 19 6.093 15.685 3 12.254 3zm.787 11.02h-1.667V9.977h-1.66V8.448h1.66V7h1.667v1.448h.46c1.178 0 1.79.636 1.79 1.578 0 .527-.222.972-.644 1.25l-.04.026.737 3.718h-1.7l-.603-3.048h-.2v3.048z"/></svg>
+        Яндекс Бизнес — рейтинг
+      </div>
+      <div style="background:var(--bg-card);border:1px solid var(--border);padding:28px 24px;display:flex;flex-direction:column;gap:20px">
+        <p style="font-size:14px;color:var(--text-dim);line-height:1.6">Наш рейтинг в Яндексе. Нажмите на бейдж — оставьте отзыв или прочитайте что говорят клиенты.</p>
+        <div>
+          <iframe src="https://yandex.ru/sprav/widget/rating-badge/240359348263?type=rating&theme=dark" width="150" height="50" frameborder="0" style="border:none;display:block"></iframe>
+        </div>
+        <a href="https://yandex.ru/profile/240359348263" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:8px;font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);text-decoration:none;transition:opacity .2s" onmouseover="this.style.opacity='.7'" onmouseout="this.style.opacity='1'">
+          Все отзывы в Яндексе <span>→</span>
+        </a>
+      </div>
     </div>
+
   </div>
 </section>
 
