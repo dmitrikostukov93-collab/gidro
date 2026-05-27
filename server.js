@@ -36,6 +36,7 @@ app.get('/robots.txt',  (req, res) => res.sendFile(path.join(__dirname, 'robots.
 app.get('/sitemap.xml', (req, res) => res.sendFile(path.join(__dirname, 'sitemap.xml')));
 app.get('/favicon.ico',  (req, res) => res.sendFile(path.join(__dirname, 'favicon.ico')));
 app.get('/yandex_caed462cead6bdcf.html', (req, res) => res.sendFile(path.join(__dirname, 'yandex_caed462cead6bdcf.html')));
+app.get('/zen_n1AY3Z0GleQlIQPqV48p6vsDAY4YenPNGfGU28HgDqrQ5TDE4uErbNFZeXf1gPLf.html', (req, res) => res.sendFile(path.join(__dirname, 'zen_n1AY3Z0GleQlIQPqV48p6vsDAY4YenPNGfGU28HgDqrQ5TDE4uErbNFZeXf1gPLf.html')));
 app.get('/dekorativnaya-shtukaturka-svoimi-rukami.html', (req, res) => {
   res.sendFile(path.join(__dirname, 'dekorativnaya-shtukaturka-svoimi-rukami.html'));
 });
