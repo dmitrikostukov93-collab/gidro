@@ -505,7 +505,7 @@ input,textarea{font-family:inherit}
         </div>
         <div class="info">
           <div class="label">Email</div>
-          <div class="value"><a href="mailto:info@dgd61.ru">info@dgd61.ru</a></div>
+          <div class="value"><a href="#" class="js-email" data-e="aW5mb0BkZ2Q2MS5ydQ=="></a></div>
           <div class="sub">Ответим в течение рабочего дня</div>
         </div>
       </div>
@@ -672,7 +672,7 @@ input,textarea{font-family:inherit}
       <ul>
         <li>Ростов-на-Дону, ул. Королева 4, оф.4 (удалённый)</li>
         <li>Пн–Сб · 09:00 — 21:00</li>
-        <li><a href="mailto:info@dgd61.ru">info@dgd61.ru</a></li>
+        <li><a href="#" class="js-email" data-e="aW5mb0BkZ2Q2MS5ydQ=="></a></li>
         <li>
           <div class="foot-messenger">
             <a href="https://t.me/+79622640157" class="foot-msg-btn" target="_blank" rel="noopener noreferrer">
@@ -697,6 +697,6 @@ input,textarea{font-family:inherit}
     <span>Ростов-на-Дону · ИНН 616118495288</span>
   </div>
 </footer>
-
+<script>document.querySelectorAll('.js-email').forEach(function(el){var a=atob(el.dataset.e);el.href='mailto:'+a;el.textContent=a;});</script>
 </body>
 </html>
