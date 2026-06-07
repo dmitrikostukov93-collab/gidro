@@ -27,7 +27,7 @@ const submitLimiter = rateLimit({
 
 // ── Главная страница ──────────────────────────────────────────────────────────
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index_real.html'));
+  res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 // ── Статика: только нужные директории и файлы ────────────────────────────────
