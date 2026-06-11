@@ -2142,26 +2142,51 @@
     var a=atob(el.dataset.e); el.href='mailto:'+a; el.textContent=a;
   });
 
-  // Политика ПДн — подставить email в текст модалки
-  (function(){
-    var e=atob('b3JkZXJAZGdkNjEucnU=');
-    var el=document.getElementById('pdp-email');
-    if(el) el.textContent=e;
-  })();
+  /* ===== MODAL ПДн ===== */
+  document.addEventListener('DOMContentLoaded', function(){
+    var modal  = document.getElementById('pdpModal');
+    var open1  = document.getElementById('pdpOpen');
+    var open2  = document.getElementById('pdpOpen2');
+    var close1 = document.getElementById('pdpClose');
+    var close2 = document.getElementById('pdpCloseBtn');
 
-  // Модалка ПДн
-  (function(){
-    var modal=document.getElementById('pdpModal');
-    var openers=[document.getElementById('pdpOpen'),document.getElementById('pdpOpen2')];
-    var closers=[document.getElementById('pdpClose'),document.getElementById('pdpCloseBtn')];
-    function open(e){e.preventDefault();modal.classList.add('open');document.body.style.overflow='hidden';}
-    function close(){modal.classList.remove('open');document.body.style.overflow='';}
-    openers.forEach(function(el){if(el)el.addEventListener('click',open);});
-    closers.forEach(function(el){if(el)el.addEventListener('click',close);});
-    modal.addEventListener('click',function(e){if(e.target===modal)close();});
-    document.addEventListener('keydown',function(e){if(e.key==='Escape'&&modal.classList.contains('open'))close();});
-  })();
+    // email в тексте модалки
+    var emailEl = document.getElementById('pdp-email');
+    if(emailEl) emailEl.textContent = atob('b3JkZXJAZGdkNjEucnU=');
+
+    function openPdp(e){ e.preventDefault(); modal.classList.add('open'); document.body.style.overflow='hidden'; }
+    function closePdp(){ modal.classList.remove('open'); document.body.style.overflow=''; }
+
+    if(open1)  open1.addEventListener('click', openPdp);
+    if(open2)  open2.addEventListener('click', openPdp);
+    if(close1) close1.addEventListener('click', closePdp);
+    if(close2) close2.addEventListener('click', closePdp);
+
+    modal.addEventListener('click', function(e){ if(e.target === modal) closePdp(); });
+    document.addEventListener('keydown', function(e){ if(e.key==='Escape' && modal.classList.contains('open')) closePdp(); });
+  });
 </script>
+
+<!-- ===== WEBHOOK BADGE ===== -->
+<style>
+.wh-sign{position:fixed!important;bottom:20px!important;right:20px!important;z-index:9999!important;display:inline-flex!important;align-items:center!important;gap:10px!important;padding:8px 15px 8px 9px!important;border-radius:12px!important;background:#0d0f13!important;border:1px solid rgba(255,255,255,.1)!important;text-decoration:none!important;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif!important;line-height:1!important;width:auto!important;transition:border-color .2s,transform .2s}
+.wh-sign img{width:32px!important;height:32px!important;border-radius:9px!important;display:block!important;border:1.5px solid rgba(24,229,138,.5)!important;box-shadow:0 0 14px -3px rgba(24,229,138,.4)!important;max-width:none!important}
+.wh-sign__txt{display:inline-flex!important;flex-direction:column!important;gap:3px!important;align-items:flex-start!important}
+.wh-sign__eyebrow{font-size:10.5px!important;font-weight:500!important;letter-spacing:.2px!important;color:#9aa3af!important}
+.wh-sign__name{font-size:19px!important;font-weight:700!important;letter-spacing:-.3px!important;color:#f4f7fa!important}
+.wh-sign__name b{color:#18e58a!important;font-weight:700!important}
+.wh-sign__sub{font-family:ui-monospace,Menlo,monospace!important;font-size:10px!important;letter-spacing:1.6px!important;text-transform:uppercase!important;color:#8a94a3!important}
+.wh-sign:hover{border-color:rgba(24,229,138,.4)!important;transform:translateY(-1px)}
+</style>
+<a href="https://webhookstudio.ru/?utm_source=smartsad&utm_medium=badge&utm_campaign=portfolio"
+   target="_blank" rel="noopener" class="wh-sign" aria-label="Сайт создан в студии WebHOOK">
+  <img src="https://webhookstudio.ru/webhook-mark.svg" alt="WebHOOK" width="32" height="32" loading="lazy"/>
+  <span class="wh-sign__txt">
+    <span class="wh-sign__eyebrow">разработано в</span>
+    <span class="wh-sign__name">Web<b>HOOK</b></span>
+    <span class="wh-sign__sub">вебсайт-студия</span>
+  </span>
+</a>
 
 <!-- ===== MODAL: ПОЛИТИКА ПДн ===== -->
 <div class="modal-overlay" id="pdpModal" role="dialog" aria-modal="true" aria-labelledby="pdpTitle">
@@ -2173,43 +2198,27 @@
     <div class="modal-body">
 
       <div class="modal-section">
-        <h4>1. Оператор персональных данных</h4>
-        <p>ИП Исаев Алексей Владимирович, ИНН 616118495288, г. Ростов-на-Дону (далее — «Оператор»). Сайт: dgd61.ru. Электронная почта: <span id="pdp-email"></span>.</p>
+        <p>Настоящая Политика определяет порядок обработки и защиты персональных данных пользователей сайта ДОН ГИДРО ДЕКОР (далее — «Оператор») и действует в отношении информации, которую Оператор может получить о пользователе во время использования сайта и его форм. Обработка ведётся в соответствии с Федеральным законом от 27.07.2006 № 152-ФЗ «О персональных данных».</p>
       </div>
 
       <div class="modal-section">
-        <h4>2. Какие данные собираем</h4>
-        <ul>
-          <li>Имя (необязательно)</li>
-          <li>Номер телефона</li>
-          <li>Данные о запрашиваемой услуге (тип, площадь, сроки)</li>
-        </ul>
-        <p style="margin-top:8px">Данные передаются добровольно при заполнении формы заявки.</p>
+        <h4>Какие данные собираем</h4>
+        <p>При заполнении формы заявки пользователь добровольно передаёт: имя (необязательно), номер телефона, информацию о запрашиваемой услуге. Иные данные (cookie, IP) могут собираться автоматически сервисом Яндекс.Метрика для анализа посещаемости.</p>
       </div>
 
       <div class="modal-section">
-        <h4>3. Цель обработки</h4>
-        <p>Обработка заявок на оказание услуг, обратная связь с клиентами, составление договоров и смет.</p>
+        <h4>Цель обработки</h4>
+        <p>Обработка заявок, обратная связь с клиентами, составление договоров и смет. Данные не используются в рекламных целях и <strong>не передаются третьим лицам</strong>.</p>
       </div>
 
       <div class="modal-section">
-        <h4>4. Правовое основание</h4>
-        <p>Федеральный закон № 152-ФЗ «О персональных данных». Обработка осуществляется на основании согласия субъекта персональных данных (чекбокс в форме).</p>
+        <h4>Хранение и удаление</h4>
+        <p>Данные хранятся на защищённом сервере. Срок хранения — до отзыва согласия или 3 лет с момента последнего обращения. Для удаления данных напишите на <span id="pdp-email"></span>.</p>
       </div>
 
       <div class="modal-section">
-        <h4>5. Хранение и передача третьим лицам</h4>
-        <p>Данные хранятся на защищённом сервере и <strong>не передаются третьим лицам</strong>, не используются в рекламных целях. Срок хранения — до отзыва согласия или 3 лет с момента последнего обращения.</p>
-      </div>
-
-      <div class="modal-section">
-        <h4>6. Права субъекта</h4>
-        <p>Вы вправе запросить доступ к своим данным, потребовать их исправления или удаления, отозвать согласие — обратившись по электронной почте, указанной выше.</p>
-      </div>
-
-      <div class="modal-section">
-        <h4>7. Актуальность политики</h4>
-        <p>Дата последнего обновления: 11 июня 2026 г. Оператор вправе вносить изменения без предварительного уведомления.</p>
+        <h4>Права пользователя</h4>
+        <p>Вы вправе в любой момент отозвать согласие, запросить доступ к своим данным или потребовать их исправления — обратившись по электронной почте выше.</p>
       </div>
 
     </div>
