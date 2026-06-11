@@ -388,7 +388,7 @@
   }
 
   *{box-sizing:border-box;margin:0;padding:0}
-  html,body{background:var(--bg);color:var(--text);font-family:'PT Sans',sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+  html,body{background:var(--bg);color:var(--text);font-family:'PT Sans',sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:clip}
   img{max-width:100%;display:block}
   button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
   input,select{font-family:inherit}
@@ -1655,7 +1655,7 @@
           <input type="text" id="website" name="website" style="display:none" tabindex="-1" autocomplete="off">
           <input type="tel" id="phone" placeholder="+7 (___) ___-__-__">
           <input type="text" id="name" placeholder="Как к вам обращаться?">
-          <label class="agree"><input type="checkbox" id="agree" checked=""> Согласен на обработку персональных данных. Не передаём третьим лицам.</label>
+          <label class="agree"><input type="checkbox" id="agree" checked=""> Согласен на <a href="#" id="pdpOpen" style="color:var(--accent);text-decoration:underline;text-underline-offset:2px">обработку персональных данных</a>. Не передаём третьим лицам.</label>
         </div>
       </div>
 
@@ -1741,7 +1741,8 @@
   </div>
   <div class="foot-bottom">
     <span>© 2021 — 2026 ДОН ГИДРО ДЕКОР</span>
-    <span>Ростов-на-Дону · ИНН 616118495288 </span>
+    <span>Ростов-на-Дону · ИНН 616118495288</span>
+    <a href="#" id="pdpOpen2" style="color:var(--text-dim);text-decoration:underline;text-underline-offset:2px;font-size:.85rem">Политика персональных данных</a>
   </div>
 </footer>
 
@@ -2140,7 +2141,83 @@
   document.querySelectorAll('.js-email').forEach(function(el){
     var a=atob(el.dataset.e); el.href='mailto:'+a; el.textContent=a;
   });
+
+  // Политика ПДн — подставить email в текст модалки
+  (function(){
+    var e=atob('b3JkZXJAZGdkNjEucnU=');
+    var el=document.getElementById('pdp-email');
+    if(el) el.textContent=e;
+  })();
+
+  // Модалка ПДн
+  (function(){
+    var modal=document.getElementById('pdpModal');
+    var openers=[document.getElementById('pdpOpen'),document.getElementById('pdpOpen2')];
+    var closers=[document.getElementById('pdpClose'),document.getElementById('pdpCloseBtn')];
+    function open(e){e.preventDefault();modal.classList.add('open');document.body.style.overflow='hidden';}
+    function close(){modal.classList.remove('open');document.body.style.overflow='';}
+    openers.forEach(function(el){if(el)el.addEventListener('click',open);});
+    closers.forEach(function(el){if(el)el.addEventListener('click',close);});
+    modal.addEventListener('click',function(e){if(e.target===modal)close();});
+    document.addEventListener('keydown',function(e){if(e.key==='Escape'&&modal.classList.contains('open'))close();});
+  })();
 </script>
+
+<!-- ===== MODAL: ПОЛИТИКА ПДн ===== -->
+<div class="modal-overlay" id="pdpModal" role="dialog" aria-modal="true" aria-labelledby="pdpTitle">
+  <div class="modal-box">
+    <div class="modal-head">
+      <h3 id="pdpTitle">Политика обработки <span>персональных данных</span></h3>
+      <button class="modal-close" id="pdpClose" aria-label="Закрыть">✕</button>
+    </div>
+    <div class="modal-body">
+
+      <div class="modal-section">
+        <h4>1. Оператор персональных данных</h4>
+        <p>ИП Исаев Алексей Владимирович, ИНН 616118495288, г. Ростов-на-Дону (далее — «Оператор»). Сайт: dgd61.ru. Электронная почта: <span id="pdp-email"></span>.</p>
+      </div>
+
+      <div class="modal-section">
+        <h4>2. Какие данные собираем</h4>
+        <ul>
+          <li>Имя (необязательно)</li>
+          <li>Номер телефона</li>
+          <li>Данные о запрашиваемой услуге (тип, площадь, сроки)</li>
+        </ul>
+        <p style="margin-top:8px">Данные передаются добровольно при заполнении формы заявки.</p>
+      </div>
+
+      <div class="modal-section">
+        <h4>3. Цель обработки</h4>
+        <p>Обработка заявок на оказание услуг, обратная связь с клиентами, составление договоров и смет.</p>
+      </div>
+
+      <div class="modal-section">
+        <h4>4. Правовое основание</h4>
+        <p>Федеральный закон № 152-ФЗ «О персональных данных». Обработка осуществляется на основании согласия субъекта персональных данных (чекбокс в форме).</p>
+      </div>
+
+      <div class="modal-section">
+        <h4>5. Хранение и передача третьим лицам</h4>
+        <p>Данные хранятся на защищённом сервере и <strong>не передаются третьим лицам</strong>, не используются в рекламных целях. Срок хранения — до отзыва согласия или 3 лет с момента последнего обращения.</p>
+      </div>
+
+      <div class="modal-section">
+        <h4>6. Права субъекта</h4>
+        <p>Вы вправе запросить доступ к своим данным, потребовать их исправления или удаления, отозвать согласие — обратившись по электронной почте, указанной выше.</p>
+      </div>
+
+      <div class="modal-section">
+        <h4>7. Актуальность политики</h4>
+        <p>Дата последнего обновления: 11 июня 2026 г. Оператор вправе вносить изменения без предварительного уведомления.</p>
+      </div>
+
+    </div>
+    <div class="modal-foot">
+      <button class="modal-btn ghost" id="pdpCloseBtn">Закрыть</button>
+    </div>
+  </div>
+</div>
 
 <!-- ===== MODAL: ДОГОВОР ===== -->
 <div class="modal-overlay" id="contractModal" role="dialog" aria-modal="true" aria-labelledby="contractTitle">
