@@ -904,7 +904,15 @@
   .nav-social .social-link{width:28px;height:28px;border-color:rgba(237,234,229,.35);color:rgba(237,234,229,.75)}
   .nav-social .social-link svg{width:14px;height:14px}
   @media(max-width:768px){.nav-social{display:none}}
-  .foot-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:30px;border-top:1px solid var(--border);font-size:12px;color:var(--text-dim);font-family:'Oswald',sans-serif;letter-spacing:.16em;text-transform:uppercase}
+  .foot-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;padding-top:30px;border-top:1px solid var(--border);font-size:12px;color:var(--text-dim);font-family:'Oswald',sans-serif;letter-spacing:.16em;text-transform:uppercase}
+  .wh-sign{display:inline-flex!important;align-items:center!important;gap:8px!important;padding:6px 12px 6px 7px!important;border-radius:10px!important;background:#0d0f13!important;border:1px solid rgba(255,255,255,.1)!important;text-decoration:none!important;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif!important;line-height:1!important;transition:border-color .2s,transform .2s;letter-spacing:0;text-transform:none}
+  .wh-sign img{width:26px!important;height:26px!important;border-radius:7px!important;display:block!important;border:1.5px solid rgba(24,229,138,.5)!important;box-shadow:0 0 10px -3px rgba(24,229,138,.4)!important;max-width:none!important}
+  .wh-sign__txt{display:inline-flex!important;flex-direction:column!important;gap:2px!important;align-items:flex-start!important}
+  .wh-sign__eyebrow{font-size:9px!important;font-weight:500!important;letter-spacing:.2px!important;color:#9aa3af!important}
+  .wh-sign__name{font-size:15px!important;font-weight:700!important;letter-spacing:-.3px!important;color:#f4f7fa!important}
+  .wh-sign__name b{color:#18e58a!important;font-weight:700!important}
+  .wh-sign__sub{font-family:ui-monospace,Menlo,monospace!important;font-size:9px!important;letter-spacing:1.4px!important;text-transform:uppercase!important;color:#8a94a3!important}
+  .wh-sign:hover{border-color:rgba(24,229,138,.4)!important;transform:translateY(-1px)}
 
   /* ===== RESPONSIVE ===== */
   @media (max-width:960px){
@@ -1743,6 +1751,7 @@
     <span>© 2021 — 2026 ДОН ГИДРО ДЕКОР</span>
     <span>Ростов-на-Дону · ИНН 616118495288</span>
     <a href="#" id="pdpOpen2" style="color:var(--text-dim);text-decoration:underline;text-underline-offset:2px;font-size:.85rem">Политика персональных данных</a>
+    <a href="https://webhookstudio.ru/?utm_source=dgd61&utm_medium=badge&utm_campaign=portfolio" target="_blank" rel="noopener" class="wh-sign" aria-label="Сайт создан в студии WebHOOK"><img src="https://webhookstudio.ru/webhook-mark.svg" alt="WebHOOK" width="26" height="26" loading="lazy"/><span class="wh-sign__txt"><span class="wh-sign__eyebrow">разработано в</span><span class="wh-sign__name">Web<b>HOOK</b></span><span class="wh-sign__sub">вебсайт-студия</span></span></a>
   </div>
 </footer>
 
@@ -2166,27 +2175,6 @@
     document.addEventListener('keydown', function(e){ if(e.key==='Escape' && modal.classList.contains('open')) closePdp(); });
   });
 </script>
-
-<!-- ===== WEBHOOK BADGE ===== -->
-<style>
-.wh-sign{position:fixed!important;bottom:20px!important;right:20px!important;z-index:9999!important;display:inline-flex!important;align-items:center!important;gap:10px!important;padding:8px 15px 8px 9px!important;border-radius:12px!important;background:#0d0f13!important;border:1px solid rgba(255,255,255,.1)!important;text-decoration:none!important;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif!important;line-height:1!important;width:auto!important;transition:border-color .2s,transform .2s}
-.wh-sign img{width:32px!important;height:32px!important;border-radius:9px!important;display:block!important;border:1.5px solid rgba(24,229,138,.5)!important;box-shadow:0 0 14px -3px rgba(24,229,138,.4)!important;max-width:none!important}
-.wh-sign__txt{display:inline-flex!important;flex-direction:column!important;gap:3px!important;align-items:flex-start!important}
-.wh-sign__eyebrow{font-size:10.5px!important;font-weight:500!important;letter-spacing:.2px!important;color:#9aa3af!important}
-.wh-sign__name{font-size:19px!important;font-weight:700!important;letter-spacing:-.3px!important;color:#f4f7fa!important}
-.wh-sign__name b{color:#18e58a!important;font-weight:700!important}
-.wh-sign__sub{font-family:ui-monospace,Menlo,monospace!important;font-size:10px!important;letter-spacing:1.6px!important;text-transform:uppercase!important;color:#8a94a3!important}
-.wh-sign:hover{border-color:rgba(24,229,138,.4)!important;transform:translateY(-1px)}
-</style>
-<a href="https://webhookstudio.ru/?utm_source=smartsad&utm_medium=badge&utm_campaign=portfolio"
-   target="_blank" rel="noopener" class="wh-sign" aria-label="Сайт создан в студии WebHOOK">
-  <img src="https://webhookstudio.ru/webhook-mark.svg" alt="WebHOOK" width="32" height="32" loading="lazy"/>
-  <span class="wh-sign__txt">
-    <span class="wh-sign__eyebrow">разработано в</span>
-    <span class="wh-sign__name">Web<b>HOOK</b></span>
-    <span class="wh-sign__sub">вебсайт-студия</span>
-  </span>
-</a>
 
 <!-- ===== MODAL: ПОЛИТИКА ПДн ===== -->
 <div class="modal-overlay" id="pdpModal" role="dialog" aria-modal="true" aria-labelledby="pdpTitle">
