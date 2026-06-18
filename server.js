@@ -33,6 +33,7 @@ app.get('/', (req, res) => {
 // ── Статика: только нужные директории и файлы ────────────────────────────────
 app.use('/assets', express.static(path.join(__dirname, 'assets')));
 app.get('/robots.txt',  (req, res) => res.sendFile(path.join(__dirname, 'robots.txt')));
+app.get('/efd1d791143114841130a44b57852bd7.txt', (req, res) => res.sendFile(path.join(__dirname, 'efd1d791143114841130a44b57852bd7.txt')));
 app.get('/sitemap.xml', (req, res) => res.sendFile(path.join(__dirname, 'sitemap.xml')));
 app.get('/favicon.ico',  (req, res) => res.sendFile(path.join(__dirname, 'favicon.ico')));
 app.get('/yandex_caed462cead6bdcf.html', (req, res) => res.sendFile(path.join(__dirname, 'yandex_caed462cead6bdcf.html')));
