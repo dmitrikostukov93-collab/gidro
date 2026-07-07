@@ -1188,7 +1188,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
       <ul>
         <li>Ростов-на-Дону, ул. Королева 4, оф.4 (удалённый)</li>
         <li>Пн–Сб · 09:00 — 21:00</li>
-        <li><a href="#" class="js-email" data-e="b3JkZXJAZGdkNjEucnU="></a></li>
+        <li><button class="js-reveal-email" data-p1="contact" data-p2="dgd61" data-p3="ru">Показать e-mail</button></li>
         <li>
           <div class="foot-messenger">
             <a href="https://t.me/+79622640157" class="foot-msg-btn" target="_blank" rel="noopener noreferrer">
@@ -1408,7 +1408,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
     tile.addEventListener('click', () => openFactures(+tile.dataset.idx));
   });
 })();
-  document.querySelectorAll('.js-email').forEach(function(el){var a=atob(el.dataset.e);el.href='mailto:'+a;el.textContent=a;});
+  document.querySelectorAll('.js-reveal-email').forEach(function(btn){btn.addEventListener('click',function(){var e=btn.dataset.p1+'@'+btn.dataset.p2+'.'+btn.dataset.p3;var a=document.createElement('a');a.href='mailto:'+e;a.textContent=e;a.style.color='inherit';btn.parentNode.replaceChild(a,btn);});});
 </script>
 </body>
 </html>

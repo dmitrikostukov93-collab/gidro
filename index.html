@@ -890,6 +890,7 @@
   .foot-grid ul a:hover{color:var(--accent)}
   .foot-messenger{display:flex;gap:8px;margin-top:2px}
   .foot-msg-btn{display:inline-flex;align-items:center;gap:7px;padding:7px 12px;border:1px solid var(--border);font-family:'Oswald',sans-serif;font-weight:600;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--text-dim);transition:color .2s,border-color .2s,background .2s}
+  .js-reveal-email{background:none;border:none;padding:0;cursor:pointer;color:var(--accent);font-size:inherit;font-family:inherit;text-decoration:underline;text-underline-offset:2px;letter-spacing:inherit}
   .foot-msg-btn:hover{color:var(--cream);border-color:var(--accent);background:rgba(192,80,42,.08)}
   .foot-msg-btn svg{width:14px;height:14px;flex-shrink:0}
   .foot-brand .h-display{font-size:24px;margin-bottom:16px}
@@ -1727,7 +1728,7 @@
       <ul>
         <li>Ростов-на-Дону, ул. Королева 4, оф.4 (удаленный)</li>
         <li>Пн–Сб · 09:00 — 21:00</li>
-        <li><a href="#" class="js-email" data-e="b3JkZXJAZGdkNjEucnU="></a></li>
+        <li><button class="js-reveal-email" data-p1="contact" data-p2="dgd61" data-p3="ru">Показать e-mail</button></li>
         <li>
           <div class="foot-messenger">
             <a href="https://t.me/+79622640157" class="foot-msg-btn" target="_blank" rel="noopener noreferrer">
@@ -2146,9 +2147,16 @@
     });
   })();
 
-  // Anti-scrape: email decode
-  document.querySelectorAll('.js-email').forEach(function(el){
-    var a=atob(el.dataset.e); el.href='mailto:'+a; el.textContent=a;
+  // Anti-scrape: email раскрывается только по клику
+  document.querySelectorAll('.js-reveal-email').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var email = btn.dataset.p1 + '@' + btn.dataset.p2 + '.' + btn.dataset.p3;
+      var a = document.createElement('a');
+      a.href = 'mailto:' + email;
+      a.textContent = email;
+      a.style.color = 'inherit';
+      btn.parentNode.replaceChild(a, btn);
+    });
   });
 
   /* ===== MODAL ПДн ===== */
@@ -2159,9 +2167,6 @@
     var close1 = document.getElementById('pdpClose');
     var close2 = document.getElementById('pdpCloseBtn');
 
-    // email в тексте модалки
-    var emailEl = document.getElementById('pdp-email');
-    if(emailEl) emailEl.textContent = atob('b3JkZXJAZGdkNjEucnU=');
 
     function openPdp(e){ e.preventDefault(); modal.classList.add('open'); document.body.style.overflow='hidden'; }
     function closePdp(){ modal.classList.remove('open'); document.body.style.overflow=''; }
@@ -2201,7 +2206,7 @@
 
       <div class="modal-section">
         <h4>Хранение и удаление</h4>
-        <p>Данные хранятся на защищённом сервере. Срок хранения — до отзыва согласия или 3 лет с момента последнего обращения. Для удаления данных напишите на <span id="pdp-email"></span>.</p>
+        <p>Данные хранятся на защищённом сервере. Срок хранения — до отзыва согласия или 3 лет с момента последнего обращения. Для удаления данных напишите на <button class="js-reveal-email" data-p1="contact" data-p2="dgd61" data-p3="ru" style="color:var(--accent);background:none;border:none;padding:0;cursor:pointer;text-decoration:underline;font-size:inherit;font-family:inherit">Показать e-mail</button>.</p>
       </div>
 
       <div class="modal-section">

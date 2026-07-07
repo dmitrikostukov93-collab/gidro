@@ -326,6 +326,7 @@ input{font-family:inherit}
 .foot-brand .phone-big{font-family:'Russo One',sans-serif;font-size:24px;color:var(--cream);margin-top:18px;letter-spacing:.02em}
 .foot-messenger{display:flex;gap:8px;margin-top:2px;flex-wrap:wrap}
 .foot-msg-btn{display:inline-flex;align-items:center;gap:7px;padding:7px 12px;border:1px solid var(--border);font-family:'Oswald',sans-serif;font-weight:600;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--text-dim);transition:color .2s,border-color .2s,background .2s}
+.js-reveal-email{background:none;border:none;padding:0;cursor:pointer;color:var(--accent);font-size:inherit;font-family:inherit;text-decoration:underline;text-underline-offset:2px;letter-spacing:inherit}
 .foot-msg-btn:hover{color:var(--cream);border-color:var(--accent);background:rgba(192,80,42,.08)}
 .foot-msg-btn svg{width:14px;height:14px;flex-shrink:0}
 /* ===== SOCIAL LINKS ===== */
@@ -646,7 +647,7 @@ input{font-family:inherit}
       <ul>
         <li>Ростов-на-Дону, ул. Королева 4, оф.4 (удалённый)</li>
         <li>Пн–Сб · 09:00 — 21:00</li>
-        <li><a href="#" class="js-email" data-e="b3JkZXJAZGdkNjEucnU="></a></li>
+        <li><button class="js-reveal-email" data-p1="contact" data-p2="dgd61" data-p3="ru">Показать e-mail</button></li>
         <li>
           <div class="foot-messenger">
             <a href="https://t.me/+79622640157" class="foot-msg-btn" target="_blank" rel="noopener noreferrer">
@@ -672,6 +673,6 @@ input{font-family:inherit}
     <a href="https://webhookstudio.ru/?utm_source=dgd61&utm_medium=badge&utm_campaign=portfolio" target="_blank" rel="noopener" class="wh-sign" aria-label="Сайт создан в студии WebHOOK"><img src="https://webhookstudio.ru/webhook-mark.svg" alt="WebHOOK" width="26" height="26" loading="lazy"/><span class="wh-sign__txt"><span class="wh-sign__eyebrow">разработано в</span><span class="wh-sign__name">Web<b>HOOK</b></span><span class="wh-sign__sub">вебсайт-студия</span></span></a>
   </div>
 </footer>
-<script>document.querySelectorAll('.js-email').forEach(function(el){var a=atob(el.dataset.e);el.href='mailto:'+a;el.textContent=a;});</script>
+<script>document.querySelectorAll('.js-reveal-email').forEach(function(btn){btn.addEventListener('click',function(){var e=btn.dataset.p1+'@'+btn.dataset.p2+'.'+btn.dataset.p3;var a=document.createElement('a');a.href='mailto:'+e;a.textContent=e;a.style.color='inherit';btn.parentNode.replaceChild(a,btn);});});</script>
 </body>
 </html>
